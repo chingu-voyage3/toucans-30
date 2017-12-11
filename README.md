@@ -15,15 +15,15 @@ Designing a landing page for Toucans-30. Inspiration taken from Tickybot.
 
 ## Coding Standards: 
 ### HTML 
-https://www.w3schools.com/html/html5_syntax.asp
-https://github.com/xfiveco/html-coding-standards
+https://www.w3schools.com/html/html5_syntax.asp  
+https://github.com/xfiveco/html-coding-standards  
 
 ### CSS
-https://google.github.io/styleguide/htmlcssguide.html
-https://github.com/xfiveco/css-coding-standards
+https://google.github.io/styleguide/htmlcssguide.html  
+https://github.com/xfiveco/css-coding-standards  
 
-### JS
-https://www.w3schools.com/js/js_conventions.asp
+### JavaScript
+https://www.w3schools.com/js/js_conventions.asp  
 
 ## Team Members
 * Richard
