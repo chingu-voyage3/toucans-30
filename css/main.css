@@ -4,6 +4,23 @@ Authors: Richard, Kyrizu, Monali Ghosh
 ------------------------------------------------------------ */
 
 /* ------------------------------------------------------------ 
+ Global Styles
+------------------------------------------------------------ */
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.clear-float {
+	clear: both;
+}
+
+
+/* ------------------------------------------------------------ 
  Base Styles
 ------------------------------------------------------------ */
 
@@ -21,10 +38,23 @@ body {
 
 h1 {
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 2.5rem; /* 40px / 16px */
-	font-weight: 700;
+	font-size: 3rem; /* 48px / 16px */
+	font-weight: 600;
 	color: #000;
+	text-align: center;
+	text-transform: uppercase;
 }
+
+h1:after {
+	content: "";
+	display: block;
+	height: 3px;
+	width: 130px;
+	margin: -6px auto 0;
+	background: #dc636c;
+}
+
+
 
 /* ------------------------------------------------------------ 
  Home Styles
@@ -35,10 +65,156 @@ h1 {
  About Us Styles
 ------------------------------------------------------------ */
 
+.about-us {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.about-us-intro {
+	display: inline-block;
+	width: 48%;
+	margin-bottom: 2rem;
+}
+
+.about-us-team {
+	background: #dfcaa1;
+	text-align: center;
+	min-height: 285px;
+}
+
+.about-us-team-profile {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.about-us-team-profile > ul {
+	list-style-type: none;
+}
+
+.about-us-team-profile > ul > li {
+	display: inline-block;
+	position: relative;
+	height: 130px;
+	width: 130px;
+	border: 10px solid rgba(255,255,255,0.3);
+	border-radius: 50%;
+	margin: 2rem 4rem;
+}
+
+.about-us-team-profile > ul > li > img {
+	border-radius: 50%;
+}
+
+.about-us-team-profile > ul > li:before {
+	content: "";
+	position: absolute;
+	color: #000;
+	font-weight: 700;
+	font-size: 1.375rem; /* 22px / 16px */
+	top: 150%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -150%);
+		 	transform: translate(-50%, -150%);
+	width: 200px;
+
+}
+
+.about-us-team-profile > ul > li:after {
+	content: "";
+	position: absolute;
+	color: #000;
+	font-weight: 400;
+	top: 180%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -180%);
+		 	transform: translate(-50%, -180%);
+	width: 200px;
+
+}
+
+.about-us-team-profile > ul li:nth-child(1):before {
+	content: "Monali Ghosh";
+}
+
+.about-us-team-profile > ul li:nth-child(1):after {
+	content: "Project Manager";
+}
+
+
+.about-us-team-profile > ul li:nth-child(2):before {
+	content: "Kyrizu";
+}
+
+.about-us-team-profile > ul li:nth-child(2):after {
+	content: "Product Manager";
+}
+
+
+.about-us-team-profile > ul li:nth-child(3):before {
+	content: "Richard";
+}
+
+.about-us-team-profile > ul li:nth-child(3):after {
+	content: "Support";
+}
+
 
 /* ------------------------------------------------------------ 
  Pricing Styles
 ------------------------------------------------------------ */
+
+.pricing {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.pricing > div {
+	display: inline-block;
+	position: relative;
+	background: #ffffff;
+	text-align: center;
+	min-width: 300px;
+	margin-bottom: 1rem;
+}
+
+.pricing button {
+	border: none;
+	background: #0f5378;
+	color: #fff;
+	padding: 1rem;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+
+
+.pricing-boxhead {
+	background: #0f5378;
+	font-weight: 700;
+	font-size: 1.375rem; /* 22px / 16px */
+	color: #f4e2be;
+	padding: 0.8rem;
+	margin: 0;
+}
+
+.pricing-content {
+	padding: 1.5rem;
+}
+
+.pricing-content > ul {
+	list-style-type: none;
+}
+
+.pricing-content > ul > li:before {
+	content: "\2713";
+	color: #000;
+	padding-right: 10px;
+	margin-left: -5px;
+}
+
+
+
+
 
 
 /* ------------------------------------------------------------ 
