@@ -26,11 +26,212 @@ h1 {
 	color: #000;
 }
 
+p {
+    font-family: 'Nunito', monospace;
+}
+
+/* ------------------------------------------------------------
+ Nav Styles
+------------------------------------------------------------ */
+li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    
+}
+.nav{
+    padding-top: 15px;
+    background: lightgrey;
+}
+
 /* ------------------------------------------------------------ 
  Home Styles
 ------------------------------------------------------------ */
 
 
+#home{
+    background: lightblue;
+}
+
+.adj{
+    display: flex;
+}
+
+div{
+    padding: 5px;
+}
+
+.home-desc{
+    text-align: center;
+    width: 40%;
+}
+
+.slogan{
+    color: white;
+}
+
+.robot-container{
+    text-align: center;
+}
+
+.circle{
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+    background: yellow; 
+    
+    -webkit-border-radius: 50%; 
+       -moz-border-radius: 50%; 
+            border-radius: 50%;
+}
+
+.head{
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+    justify-content: center;
+    background: #e7eaec;
+    
+   -webkit-border-radius: 50%; 
+      -moz-border-radius: 50%; 
+           border-radius: 50%;
+    
+    -webkit-box-shadow: inset -4px -4px 0px 1px #dcd9d9;
+       -moz-box-shadow: inset -4px -4px 0px 1px #dcd9d9;
+            box-shadow: inset -4px -4px 0px 1px #dcd9d9;
+}
+
+.eye-container{
+    position: relative;
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+    margin-top: 15px
+}
+.right-eye{
+    position: relative;
+    width: 3.5vw;
+    height: 3.5vw;
+    max-height: 30px;
+    max-width: 30px;
+    min-height: 20px;
+    min-width: 20px;
+    background: e7eaec; 
+
+    margin-top: 7px;
+    margin-left: 1px;
+    
+   -webkit-border-radius: 50%; 
+      -moz-border-radius: 50%; 
+           border-radius: 50%;
+    
+    -webkit-box-shadow: inset 0px 0px 28px #af895d;
+       -moz-box-shadow: inset 0px 0px 28px #af895d;
+            box-shadow: inset 0px 0px 28px #af895d;
+}
+
+
+.left-eye{
+    position: relative;
+    width: 3.5vw;
+    height: 3.5vw;
+    max-height: 30px;
+    max-width: 30px;
+    min-height: 20px;
+    min-width: 20px;
+    background: e7eaec; 
+
+    margin-top: 7px;
+    margin-left: 4px;
+    
+   -webkit-border-radius: 50%; 
+      -moz-border-radius: 50%; 
+           border-radius: 50%;
+    
+    -webkit-box-shadow: inset 0px 0px 18px #af895d;
+       -moz-box-shadow: inset 0px 0px 18px #af895d;
+            box-shadow: inset 0px 0px 18px #af895d;
+    
+}
+
+.iris{
+    width: 1vw;
+    height: 1vw;
+    max-height: 6px;
+    max-width: 6px;
+    min-height: 1px;
+    min-width: 1px;
+    background: black; 
+    
+    margin: 0 auto;
+    margin-top: 0.4vw;
+    
+   -webkit-border-radius: 50%; 
+      -moz-border-radius: 50%; 
+           border-radius: 50%;
+    
+    -webkit-box-shadow: inset 0px 0px 8px #af895d;
+       -moz-box-shadow: inset 0px 0px 8px #af895d;
+            box-shadow: inset 0px 0px 8px #af895d;
+}
+
+.mouth{
+    position: relative;
+    width: 50%;
+    height: 10px;
+    left: 25%;
+    top: 10%;
+    background-color: bisque;
+    
+   -webkit-border-radius: 4px 4px 4px 4px; 
+      -moz-border-radius: 4px 4px 4px 4px; 
+           border-radius: 4px 4px 4px 4px;
+    
+    -webkit-box-shadow: inset 0px 0px 8px #af895d;
+       -moz-box-shadow: inset 0px 0px 8px #af895d;
+            box-shadow: inset 0px 0px 8px #af895d;
+}
+
+.torso {
+    position: relative;
+    height: 0;
+    width: 130px;
+    margin-left: 75px;
+    margin-top: -5px;
+    border-top: 100px solid #fff;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-radius: 20px 20px 200px 200px;
+    
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+       -moz-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+		-ms-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+		 -o-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+		    filter: drop-shadow(2px 2.5px 1px rgba(0,0,0,.5));
+}
+
+.chest-display{
+    position: relative;
+    top: -90px;
+    left: -20px;
+    
+    border-top: 35px solid #000;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-radius: 20px 20px 200px 200px;
+    
+}
+
+#trapezoid {
+	border-bottom: 100px solid red;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 100px;
+}
+			
 /* ------------------------------------------------------------ 
  About Us Styles
 ------------------------------------------------------------ */
@@ -48,4 +249,8 @@ h1 {
 
 /* ------------------------------------------------------------ 
  Footer Styles
+------------------------------------------------------------ */
+
+/* ------------------------------------------------------------ 
+ Screen changes Styles
 ------------------------------------------------------------ */
