@@ -20,144 +20,182 @@
     	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
     	<link rel="stylesheet" href="css/normalize.css">
     	<link rel="stylesheet" href="css/main.css">
+    	<link rel="stylesheet" href="css/font-awesome.min.css">
 
-    <!-- JavaScript
-    	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    	<script type="text/javascript" src="scripts/main.js"></script>
 
     <!-- Favicon
     	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    	<link rel="icon" type="image/png" href="imgs/favicon.png">
+    	<!-- <link rel="icon" type="image/png" href="imgs/favicon.png"> -->
 
     </head>
     <body>
     	<div class="wrapper">
+    	<!-- Navigation
+    		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    		<nav>
+    			<input type="checkbox" name="hamMenu" value="hamMenu" id="hamMenu" >
+    			<label for="hamMenu" class="menuToggle">
+    				<div class="menu-line1"></div>
+    				<div class="menu-line2"></div>
+    				<div class="menu-line3"></div>
+    			</label>	
 
-		<!-- Home
-			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    			<div class="navigation">
+    				<ul id="navList">
+    					<li>TickyBot</li>
+    					<li><a href="#" class="navlink">Home</a></li>
+    					<li><a href="#aboutUs" class="navlink">About Us</a></li>
+    					<li><a href="#" class="navlink">Features</a></li>
+    					<li><a href="#pricing" class="navlink">Pricing</a></li>
+    					<li><a href="#" class="navlink">Contact Us</a></li>
+    				</ul>
+    			</div>
+    			
+    			<div class="logo-sm">TickyBot</div>
+    		</nav>
 
-		<!-- About Us Intro
-			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-			<section class="about-us">
-				<h1>About Us</h1>
-				<div class="about-us-intro float-left">
-					<p>We created Atomist in 2015 with the goal of transforming how software is developed and delivered.</p>
-					<p>The shift to cloud-native applications and easily accessible cloud platforms means that developers have much more freedom to go from idea to running application. The silos across development and infrastructure have been torn down. As developers, we can now develop, build, test, deploy, and monitor our own services.</p>
-				</div>
-				<div class="about-us-intro float-right">
-					<p>We believe that developers should have tools to take care of the individual stages of that flow, and very importantly, a way to integrate, streamline, and automate the overall flow from code to ship. We started Atomist to build that platform for developers.</p>
-					<p>We have deep roots in open source and serving developers at SpringSource, Pivotal/VMware, GitHub and Oracle. Our core technologies are rooted in deeply understanding the code, people, and flow.</p>
-				</div>
-			</section>
+    	<!-- Main content start
+    		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    		<main>
 
-		<!-- About Us Team
-			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-			<section class="about-us-team clear-float">
-				<div class="about-us-team-profile">
-					<ul>
-						<li><img src="imgs/placeholder.jpg"></li>
-						<li><img src="imgs/placeholder.jpg"></li>
-						<li><img src="imgs/placeholder.jpg"></li>
-					</ul>
-				</div>
-			</section>
-
-		<!-- Features
-			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<!-- Home
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 
-		<!-- Pricing
-			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-			<section class="pricing">
-				<h1>Pricing</h1>
+			<!-- About Us Intro
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<section class="about-us" id="aboutUs">
+					<h1>About Us</h1>
+					<div class="about-us-intro float-left">
+						<p>We created Atomist in 2015 with the goal of transforming how software is developed and delivered.</p>
+						<p>The shift to cloud-native applications and easily accessible cloud platforms means that developers have much more freedom to go from idea to running application. The silos across development and infrastructure have been torn down. As developers, we can now develop, build, test, deploy, and monitor our own services.</p>
+					</div>
+					<div class="about-us-intro float-right">
+						<p>We believe that developers should have tools to take care of the individual stages of that flow, and very importantly, a way to integrate, streamline, and automate the overall flow from code to ship. We started Atomist to build that platform for developers.</p>
+						<p>We have deep roots in open source and serving developers at SpringSource, Pivotal/VMware, GitHub and Oracle. Our core technologies are rooted in deeply understanding the code, people, and flow.</p>
+					</div>
+				</section>
 
-				<div class="pricing-content-wrapper"><!-- Pricing content start -->
+			<!-- About Us Team
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<section class="about-us-team clear-float">
+					<div class="about-us-team-profile">
+						<ul>
+							<li><img src="imgs/placeholder.jpg"></li>
+							<li><img src="imgs/placeholder.jpg"></li>
+							<li><img src="imgs/placeholder.jpg"></li>
+						</ul>
+					</div>
+				</section>
 
-					<div class="pricing-content box-community"><!-- Pricing box 1 start -->
-						<h2 class="pricing-boxhead light-blue">Community</h2>
-						<div class="pricing-descri">
-							<h3 class="pricing-descri-head">Always Free</h3>
-							<p>Public GitHub Repos</p>
-							<p class="small-font italic">up to 5,000 events / month</p>
-							<ul>
-								<li>Slack Bot</li>
-								<li>Streamline Processes</li>
-								<li>Unlimited Automations</li>
-								<li>Event Handlers</li>
-								<li>Commands</li>
-								<li>Project Creation</li>
-								<li>Custom Automations</li>
-							</ul>
+			<!-- Features
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-							<h4 class="pricing-descri-subhead">Management</h4>
-							<span>Console, Manage and monitor automations</span>
-							<h4 class="pricing-descri-subhead">Security</h4>
-							<span>HTTPS, Secret Management, Attribution</span>
-							<h4 class="pricing-descri-subhead">Delivery</h4>
-							<span>Cloud</span>
-						</div>
-						<input type="button" name="get-started" value="Get Started" class="light-blue">
-					</div><!-- Pricing box 1 end -->
 
-					<div class="pricing-content box-pro"><!-- Pricing box 2 start -->
-						<h2 class="pricing-boxhead">Pro</h2>
-						<div class="pricing-descri pro">
-							<h3 class="pricing-descri-head">Free During Early Access</h3>
-							<p>Public GitHub Repos</p>
-							<p class="small-font italic">up to 25,000 events / month</p>
-							<ul>
-								<li>Slack Bot</li>
-								<li>Streamline Processes for Private Repos</li>
-								<li>Unlimited Automations</li>
-								<li>Event Handlers</li>
-								<li>Commands</li>
-								<li>Project Creation</li>
-								<li>Custom Automations</li>
-							</ul>
+			<!-- Pricing
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<section class="pricing" id="pricing">
+					<h1>Pricing</h1>
 
-							<h4 class="pricing-descri-subhead">Management</h4>
-							<span>Console, Manage and monitor automations</span>
-							<h4 class="pricing-descri-subhead">Security</h4>
-							<span>HTTPS, Secret Management, Attribution</span>
-							<h4 class="pricing-descri-subhead">Delivery</h4>
-							<span>Cloud</span>
-						</div>
-						<input type="button" name="get-started" value="Get Started" class="dark-blue">
-					</div><!-- Pricing box 2 end -->
+					<div class="pricing-content-wrapper"><!-- Pricing content start -->
 
-					<div class="pricing-content box-enterprise"><!-- Pricing box 3 start -->
-						<h2 class="pricing-boxhead light-blue">Enterprise</h2>
-						<div class="pricing-descri">
-							<h3 class="pricing-descri-head">Contact Us</h3>
-							<p>Private GitHub Organizations GitHub Enterprise</p>
-							<p class="small-font italic">Starting at up to 75,000 events / month</p>
-							<ul>
-								<li>Slack Bot</li>
-								<li>Streamline Processes</li>
-								<li>Unlimited Automations</li>
-								<li>Event Handlers</li>
-								<li>Commands</li>
-								<li>Project Creation</li>
-								<li>Custom Automations</li>
-							</ul>
-							<h4 class="pricing-descri-subhead">Management</h4>
-							<span>Console, Manage and monitor automations</span>
-							<h4 class="pricing-descri-subhead">Security</h4>
-							<span>HTTPS, Secret Management, Attribution, Role Based Access Control, Identity and Access Management</span>
-							<h4 class="pricing-descri-subhead">Delivery</h4>
-							<span>Cloud and Self-Hosted</span>
-						</div>
-						<input type="button" name="get-started" value="Get Started" class="light-blue">
-					</div><!-- Pricing box 3 end -->
+						<div class="pricing-content box-community"><!-- Pricing box 1 start -->
+							<h2 class="pricing-boxhead light-blue">Community</h2>
+							<div class="pricing-descri">
+								<h3 class="pricing-descri-head">Always Free</h3>
+								<p>Public GitHub Repos</p>
+								<p class="small-font italic">up to 5,000 events / month</p>
+								<ul>
+									<li>Slack Bot</li>
+									<li>Streamline Processes</li>
+									<li>Unlimited Automations</li>
+									<li>Event Handlers</li>
+									<li>Commands</li>
+									<li>Project Creation</li>
+									<li>Custom Automations</li>
+								</ul>
 
-				</div><!-- Pricing content end -->
-			</section>
+								<h4 class="pricing-descri-subhead">Management</h4>
+								<span>Console, Manage and monitor automations</span>
+								<h4 class="pricing-descri-subhead">Security</h4>
+								<span>HTTPS, Secret Management, Attribution</span>
+								<h4 class="pricing-descri-subhead">Delivery</h4>
+								<span>Cloud</span>
+							</div>
+							<input type="button" name="get-started" value="Get Started" class="light-blue">
+						</div><!-- Pricing box 1 end -->
 
-		<!-- Quick Help
-			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+						<div class="pricing-content box-pro"><!-- Pricing box 2 start -->
+							<h2 class="pricing-boxhead">Pro</h2>
+							<div class="pricing-descri pro">
+								<h3 class="pricing-descri-head">Free During Early Access</h3>
+								<p>Public GitHub Repos</p>
+								<p class="small-font italic">up to 25,000 events / month</p>
+								<ul>
+									<li>Slack Bot</li>
+									<li>Streamline Processes for Private Repos</li>
+									<li>Unlimited Automations</li>
+									<li>Event Handlers</li>
+									<li>Commands</li>
+									<li>Project Creation</li>
+									<li>Custom Automations</li>
+								</ul>
 
-		<!-- Footer
-			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		</div>
-	</body>
-	</html>
+								<h4 class="pricing-descri-subhead">Management</h4>
+								<span>Console, Manage and monitor automations</span>
+								<h4 class="pricing-descri-subhead">Security</h4>
+								<span>HTTPS, Secret Management, Attribution</span>
+								<h4 class="pricing-descri-subhead">Delivery</h4>
+								<span>Cloud</span>
+							</div>
+							<input type="button" name="get-started" value="Get Started" class="dark-blue">
+						</div><!-- Pricing box 2 end -->
+
+						<div class="pricing-content box-enterprise"><!-- Pricing box 3 start -->
+							<h2 class="pricing-boxhead light-blue">Enterprise</h2>
+							<div class="pricing-descri">
+								<h3 class="pricing-descri-head">Contact Us</h3>
+								<p>Private GitHub Organizations GitHub Enterprise</p>
+								<p class="small-font italic">Starting at up to 75,000 events / month</p>
+								<ul>
+									<li>Slack Bot</li>
+									<li>Streamline Processes</li>
+									<li>Unlimited Automations</li>
+									<li>Event Handlers</li>
+									<li>Commands</li>
+									<li>Project Creation</li>
+									<li>Custom Automations</li>
+								</ul>
+								<h4 class="pricing-descri-subhead">Management</h4>
+								<span>Console, Manage and monitor automations</span>
+								<h4 class="pricing-descri-subhead">Security</h4>
+								<span>HTTPS, Secret Management, Attribution, Role Based Access Control, Identity and Access Management</span>
+								<h4 class="pricing-descri-subhead">Delivery</h4>
+								<span>Cloud and Self-Hosted</span>
+							</div>
+							<input type="button" name="get-started" value="Get Started" class="light-blue">
+						</div><!-- Pricing box 3 end -->
+
+					</div><!-- Pricing content end -->
+				</section>
+
+			<!-- Quick Help
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+			<!-- Footer
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+			<!-- Scroll to top
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+				<button id="scrollToTop">
+					<i class="fa fa-chevron-up" aria-hidden="true"></i>
+					<div>Top</div>
+				</button>	
+				
+		</main>
+	</div>
+	<!-- JavaScript
+    	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    	<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>

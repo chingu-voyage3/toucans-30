@@ -31,6 +31,10 @@ Authors: Richard, Kyrizu, Monali Ghosh
 /* ------------------------------------------------------------ 
  Base Styles
  ------------------------------------------------------------ */
+html, body {
+        height: 100%;
+        margin: 0px;
+    }
 
  body {
  	font-family: 'Nunito', sans-serif;
@@ -38,10 +42,12 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	font-weight: 400;
  	color: #000;
  	background: #f4e2be;
+ 	height: 100%;
  }
 
  .wrapper {
  	width: 100%;
+ 	height: 100%;
  }
 
  h1 {
@@ -63,6 +69,150 @@ Authors: Richard, Kyrizu, Monali Ghosh
  }
 
 
+/* ------------------------------------------------------------ 
+ Navigation Styles
+ ------------------------------------------------------------ */
+
+ nav {
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	height: 100%;
+ 	background: #0f5378;
+ 	z-index: 10;
+ 	min-width: 70px;
+ }
+
+ .navigation {
+ 	position: relative;
+ 	transition: all 600ms cubic-bezier(.8,-.5,.2,1.4);
+
+ }
+
+ .navigation {
+ 	max-width: 260px;
+ 	margin-left: -220px;
+ }
+
+ input[type="checkbox"]{
+
+ 	display: none;
+ }
+
+ label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    max-width: 50px;
+    margin: 1.3rem auto;
+ }
+
+ .menu-line1,
+ .menu-line2,
+ .menu-line3 {
+	display: block;
+	left: 0;
+	position: relative;
+	background: #f4e2be;
+	height: 5px;
+	transition: .4s ease-in-out;
+}
+
+.menu-line1 {
+	top: 0;
+}
+.menu-line2 {
+	top: 10px;
+	opacity: 1;
+}
+.menu-line3 {
+	top: 20px;
+}
+
+input[type="checkbox"]:checked ~ label > div.menu-line1,
+  .menuToggle:hover > div.menu-line1 {
+	transform: rotate(135deg);
+	top: 13px;
+ }
+
+input[type="checkbox"]:checked ~ label > div.menu-line3,
+  .menuToggle:hover > div.menu-line3 {
+	transform: rotate(-135deg);
+	top: 3px;
+ }
+
+input[type="checkbox"]:checked ~ label > div.menu-line2,
+  .menuToggle:hover > div.menu-line2 {
+	left: -40px;
+	opacity: 0;
+ }
+
+
+ input[type="checkbox"]:checked  ~ .navigation {
+	margin-left: 0;
+ }
+
+
+
+ .logo-sm {
+ 	position: absolute;
+ 	bottom: 6%;
+ 	left: -90%;
+ 	transform: rotate(-90deg) translate(-6%, 90%);
+ 	font-size: 2rem;
+ 	color: #f4e2be;
+ }
+
+  .navigation > ul {
+ 	list-style-type: none;
+ 	padding: 0;
+ 	margin: 0 1.5rem 0 1rem;
+ 	text-align: center;
+ }
+
+  .navigation > ul > li {
+ 	padding: 1.2rem;
+ }
+
+   .navigation > ul > li:first-child {
+ 	padding: 2rem;
+ 	color: #f4e2be;
+ 	font-size: 2.2rem;
+ 	font-weight: 700;
+ }
+
+ .navlink {
+	color: #f1c66a;
+	position: relative;
+ }
+
+
+  .navlink:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -5px;
+	height: 3px;
+	background: #dc636c;
+	width: 0;
+	transition: width 0.5s ease;
+ }
+
+  .navlink:hover:after {
+	color: #000;
+	width: 80%;
+ }
+
+
+
+ main {
+ 	height: 100%;
+ 	position: relative;
+ }
 
 /* ------------------------------------------------------------ 
  Home Styles
@@ -304,6 +454,45 @@ Authors: Richard, Kyrizu, Monali Ghosh
  Footer Styles
  ------------------------------------------------------------ */
 
+
+ /* ------------------------------------------------------------ 
+ Scroll To Top Button Styles
+ ------------------------------------------------------------ */
+
+  #scrollToTop {
+  	display: block;
+  	position: fixed;
+  	bottom: 15px;
+  	right: 15px;
+  	opacity: 0;
+  	transition: 0.5s ease-in;
+  	background: #dc636c;
+  	border: 2px solid rgba(255,255,255,0.5);
+  	padding: 0.6rem;
+  	z-index: 10;
+  	cursor: pointer;
+  	color: #f4e2be;
+  	font-family: 'Nunito', sans-serif;
+  	transition: 0.5s ease-in-out;
+  	outline: none;
+  }
+
+  #scrollToTop i,
+  #scrollToTop div {
+  	position: relative;
+  	opacity: 1;
+  	top: 0;
+  	transition: 0.3s ease-in-out;
+  }
+
+  #scrollToTop:hover i {
+  	opacity: 0;
+  	top: -40px;
+  }
+
+    #scrollToTop:hover div {
+  	top: -10px;
+  }
 
 /* ------------------------------------------------------------ 
  Media Queries
