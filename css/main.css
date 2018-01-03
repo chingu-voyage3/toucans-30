@@ -31,10 +31,9 @@ Authors: Richard, Kyrizu, Monali Ghosh
 /* ------------------------------------------------------------ 
  Base Styles
  ------------------------------------------------------------ */
-html, body {
-        height: 100%;
-        margin: 0px;
-    }
+ html, body {
+ 	height: 100%;
+ }
 
  body {
  	font-family: 'Nunito', sans-serif;
@@ -43,11 +42,14 @@ html, body {
  	color: #000;
  	background: #f4e2be;
  	height: 100%;
+ 	overflow-x: hidden;
+
  }
 
  .wrapper {
  	width: 100%;
  	height: 100%;
+ 	position: relative;
  }
 
  h1 {
@@ -69,6 +71,13 @@ html, body {
  }
 
 
+ main {
+ 	height: 100%;
+ 	position: relative;
+ 	transition: all 600ms cubic-bezier(.8,-.5,.2,1);
+ 	margin-left: 70px;
+ }
+
 /* ------------------------------------------------------------ 
  Navigation Styles
  ------------------------------------------------------------ */
@@ -85,75 +94,76 @@ html, body {
 
  .navigation {
  	position: relative;
+ 	margin: 6rem auto;
  	transition: all 600ms cubic-bezier(.8,-.5,.2,1.4);
-
- }
-
- .navigation {
- 	max-width: 260px;
+ 	width: 260px;
  	margin-left: -220px;
+ 	text-align: center;
  }
 
- input[type="checkbox"]{
-
+ #hamMenu {
  	display: none;
  }
 
- label {
-    cursor: pointer;
-    position: relative;
-    display: block;
-    width: 40px;
-    height: 40px;
-    max-width: 50px;
-    margin: 1.3rem auto;
+ .menuToggle {
+ 	cursor: pointer;
+ 	position: absolute;
+ 	display: block;
+ 	width: 40px;
+ 	height: 40px;
+ 	top: 0;
+ 	left: 15px;
+ 	z-index: 11;
  }
 
  .menu-line1,
  .menu-line2,
  .menu-line3 {
-	display: block;
-	left: 0;
-	position: relative;
-	background: #f4e2be;
-	height: 5px;
-	transition: .4s ease-in-out;
-}
-
-.menu-line1 {
-	top: 0;
-}
-.menu-line2 {
-	top: 10px;
-	opacity: 1;
-}
-.menu-line3 {
-	top: 20px;
-}
-
-input[type="checkbox"]:checked ~ label > div.menu-line1,
-  .menuToggle:hover > div.menu-line1 {
-	transform: rotate(135deg);
-	top: 13px;
+ 	display: block;
+ 	left: 0;
+ 	position: relative;
+ 	background: #f4e2be;
+ 	height: 5px;
+ 	transition: .4s ease-in-out;
  }
 
-input[type="checkbox"]:checked ~ label > div.menu-line3,
-  .menuToggle:hover > div.menu-line3 {
-	transform: rotate(-135deg);
-	top: 3px;
+ .menu-line1 {
+ 	top: 0;
+ }
+ .menu-line2 {
+ 	top: 10px;
+ 	opacity: 1;
+ }
+ .menu-line3 {
+ 	top: 20px;
  }
 
-input[type="checkbox"]:checked ~ label > div.menu-line2,
-  .menuToggle:hover > div.menu-line2 {
-	left: -40px;
-	opacity: 0;
+ #hamMenu:checked ~ label.menuToggle > div.menu-line1,
+ .menuToggle:hover > div.menu-line1 {
+ 	transform: rotate(135deg);
+ 	top: 13px;
+ }
+
+ #hamMenu:checked ~ label.menuToggle > div.menu-line3,
+ .menuToggle:hover > div.menu-line3 {
+ 	transform: rotate(-135deg);
+ 	top: 3px;
+ }
+
+ #hamMenu:checked ~ label.menuToggle > div.menu-line2,
+ .menuToggle:hover > div.menu-line2 {
+ 	left: -40px;
+ 	opacity: 0;
  }
 
 
- input[type="checkbox"]:checked  ~ .navigation {
-	margin-left: 0;
+ #hamMenu:checked ~ nav > div.navigation {
+ 	margin-left: 0;
  }
 
+ #hamMenu:checked ~ main {
+ 	transform: translateX(185px);
+ }
 
 
  .logo-sm {
@@ -165,54 +175,47 @@ input[type="checkbox"]:checked ~ label > div.menu-line2,
  	color: #f4e2be;
  }
 
-  .navigation > ul {
+ .navigation > ul {
  	list-style-type: none;
  	padding: 0;
  	margin: 0 1.5rem 0 1rem;
  	text-align: center;
  }
 
-  .navigation > ul > li {
+ .navigation > ul > li {
  	padding: 1.2rem;
  }
 
-   .navigation > ul > li:first-child {
- 	padding: 2rem;
+ .navigation > p {
  	color: #f4e2be;
  	font-size: 2.2rem;
  	font-weight: 700;
  }
 
  .navlink {
-	color: #f1c66a;
-	position: relative;
- }
-
-
-  .navlink:after {
-	content: "";
-	display: block;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: -5px;
-	height: 3px;
-	background: #dc636c;
-	width: 0;
-	transition: width 0.5s ease;
- }
-
-  .navlink:hover:after {
-	color: #000;
-	width: 80%;
- }
-
-
-
- main {
- 	height: 100%;
+ 	color: #f1c66a;
  	position: relative;
  }
+
+
+ .navlink:after {
+ 	content: "";
+ 	display: block;
+ 	position: absolute;
+ 	left: 50%;
+ 	transform: translateX(-50%);
+ 	bottom: -5px;
+ 	height: 3px;
+ 	background: #dc636c;
+ 	width: 0;
+ 	transition: width 0.5s ease;
+ }
+
+ .navlink:hover:after {
+ 	color: #000;
+ 	width: 80%;
+ }
+
 
 /* ------------------------------------------------------------ 
  Home Styles
@@ -459,40 +462,40 @@ input[type="checkbox"]:checked ~ label > div.menu-line2,
  Scroll To Top Button Styles
  ------------------------------------------------------------ */
 
-  #scrollToTop {
-  	display: block;
-  	position: fixed;
-  	bottom: 15px;
-  	right: 15px;
-  	opacity: 0;
-  	transition: 0.5s ease-in;
-  	background: #dc636c;
-  	border: 2px solid rgba(255,255,255,0.5);
-  	padding: 0.6rem;
-  	z-index: 10;
-  	cursor: pointer;
-  	color: #f4e2be;
-  	font-family: 'Nunito', sans-serif;
-  	transition: 0.5s ease-in-out;
-  	outline: none;
-  }
+ #scrollToTop {
+ 	display: block;
+ 	position: fixed;
+ 	bottom: 15px;
+ 	right: 15px;
+ 	opacity: 0;
+ 	transition: 0.5s ease-in;
+ 	background: #dc636c;
+ 	border: 2px solid rgba(255,255,255,0.5);
+ 	padding: 0.6rem;
+ 	z-index: 10;
+ 	cursor: pointer;
+ 	color: #f4e2be;
+ 	font-family: 'Nunito', sans-serif;
+ 	transition: 0.5s ease-in-out;
+ 	outline: none;
+ }
 
-  #scrollToTop i,
-  #scrollToTop div {
-  	position: relative;
-  	opacity: 1;
-  	top: 0;
-  	transition: 0.3s ease-in-out;
-  }
+ #scrollToTop i,
+ #scrollToTop div {
+ 	position: relative;
+ 	opacity: 1;
+ 	top: 0;
+ 	transition: 0.3s ease-in-out;
+ }
 
-  #scrollToTop:hover i {
-  	opacity: 0;
-  	top: -40px;
-  }
+ #scrollToTop:hover i {
+ 	opacity: 0;
+ 	top: -40px;
+ }
 
-    #scrollToTop:hover div {
-  	top: -10px;
-  }
+ #scrollToTop:hover div {
+ 	top: -10px;
+ }
 
 /* ------------------------------------------------------------ 
  Media Queries
@@ -602,7 +605,7 @@ input[type="checkbox"]:checked ~ label > div.menu-line2,
 
  	.pricing-descri {
  		min-height: 690px;
-	}
+ 	}
 
  }
 
@@ -632,7 +635,7 @@ input[type="checkbox"]:checked ~ label > div.menu-line2,
  		min-width: 200px;
  		max-width: 230px;
  		margin: 1.5rem 0 2rem;
-	}
+ 	}
 
  	.box-community,
  	.box-enterprise,
@@ -642,13 +645,13 @@ input[type="checkbox"]:checked ~ label > div.menu-line2,
  		transform: translateX(0);
  	}
 
- 	 .pricing-descri {
+ 	.pricing-descri {
  		min-height: 980px;
-	 }
+ 	}
 
  }
 
-  @media screen and (min-width: 950px){
+ @media screen and (min-width: 950px){
 
  	.about-us-team-profile > ul > li {
  		height: 130px;
@@ -664,12 +667,12 @@ input[type="checkbox"]:checked ~ label > div.menu-line2,
  		font-size: 1.25rem; /* 20px / 16px */
  	}
 
- 	 .pricing-content-wrapper > div {
+ 	.pricing-content-wrapper > div {
  		min-width: 290px;
  		max-width: 33.3333%;
  		position: absolute;
  		display: block;
-	}
+ 	}
 
  	.box-community,
  	.box-enterprise {
@@ -693,30 +696,30 @@ input[type="checkbox"]:checked ~ label > div.menu-line2,
  		right: 0;
  	}
 
-	.pricing-descri {
+ 	.pricing-descri {
  		min-height: 850px;
-	}
+ 	}
 
  }
 
 
  @media screen and (min-width: 1050px){
 
- 	 .about-us-intro {
- 	display: inline-block;
- 	width: 48%;
- }
+ 	.about-us-intro {
+ 		display: inline-block;
+ 		width: 48%;
+ 	}
 
-	.pricing-descri {
+ 	.pricing-descri {
  		min-height: 800px;
-	}
+ 	}
 
  }
 
-  @media screen and (min-width: 1350px){
+ @media screen and (min-width: 1350px){
 
-	.pricing-descri {
+ 	.pricing-descri {
  		min-height: 720px;
-	}
+ 	}
 
  }
