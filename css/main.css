@@ -107,11 +107,11 @@ Authors: Richard, Kyrizu, Monali Ghosh
 
  .menuToggle {
  	cursor: pointer;
- 	position: absolute;
+ 	position: fixed;
  	display: block;
  	width: 40px;
  	height: 40px;
- 	top: 0;
+ 	top: 25px;
  	left: 15px;
  	z-index: 11;
  }
@@ -156,7 +156,6 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	opacity: 0;
  }
 
-
  #hamMenu:checked ~ nav > div.navigation {
  	margin-left: 0;
  }
@@ -173,7 +172,9 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	transform: rotate(-90deg) translate(-6%, 90%);
  	font-size: 2rem;
  	color: #f4e2be;
+ 	font-weight: 700;
  }
+
 
  .navigation > ul {
  	list-style-type: none;
@@ -186,10 +187,16 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	padding: 1.2rem;
  }
 
- .navigation > p {
+.logo {
  	color: #f4e2be;
  	font-size: 2.2rem;
  	font-weight: 700;
+ }
+
+ .logo > span,
+  .logo-sm > span {
+ 	font-weight: 400;
+ 	color: #80c3e7;
  }
 
  .navlink {
@@ -463,21 +470,20 @@ Authors: Richard, Kyrizu, Monali Ghosh
  ------------------------------------------------------------ */
 
  #scrollToTop {
- 	display: block;
- 	position: fixed;
- 	bottom: 15px;
- 	right: 15px;
- 	opacity: 0;
- 	transition: 0.5s ease-in;
  	background: #dc636c;
  	border: 2px solid rgba(255,255,255,0.5);
- 	padding: 0.6rem;
- 	z-index: 10;
- 	cursor: pointer;
+ 	bottom: 15px;
  	color: #f4e2be;
+ 	cursor: pointer;
+ 	display: block;
  	font-family: 'Nunito', sans-serif;
- 	transition: 0.5s ease-in-out;
+ 	opacity: 0;
  	outline: none;
+ 	padding: 0.6rem;
+ 	position: fixed;
+ 	right: 15px;
+ 	transition: 0.5s ease-in-out;
+ 	z-index: 10;
  }
 
  #scrollToTop i,
@@ -506,6 +512,10 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	h1 {
  		font-size: 2.5rem; /* 40px / 16px */
  	}
+
+ 	 main {
+ 	margin-left: 50px;
+ }
 
  	.about-us {
  		width: 90%;
@@ -556,34 +566,81 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	}
 
  	.pricing {
- 		width: 90%;
+ 		width: 100%;
  		position: relative;
  	}
 
  	.pricing-content-wrapper > div {
  		display: block;
- 		min-width: 275px;
- 		width: 90%;
+ 		min-width: 250px;
+ 		width: 80%;
  		position: relative;
  	}
 
  	.box-community,
  	.box-enterprise,
  	.box-pro {
- 		left: 50%;
+ 		left: 65%;
  		top:0;
- 		transform: translateX(-50%);
+ 		transform: translateX(-65%);
  	}
+
+ 	#scrollToTop {
+ 	border: 1px solid rgba(255,255,255,0.5);
+ 	padding: 0.4rem;
+ 	font-size: 1rem;
+ }
+
+  #scrollToTop div {
+  	display: none;
+  }
+
+ #scrollToTop:hover i {
+ 	opacity: 1;
+ 	top: -5px;
+ }
+
+  nav {
+ 	min-width: 50px;
+ }
+
+  .menuToggle {
+ 	width: 30px;
+ 	height: 30px;
+ 	top: 22px;
+ 	left: 9px;
+ }
+
+ .menu-line2 {
+ 	top: 8px;
+ }
+ .menu-line3 {
+ 	top: 16px;
+ }
+
+  .logo-sm {
+ 	left: -125%;
+ 	transform: rotate(-90deg) translate(-6%, 90%);
+ 	font-size: 1.8rem;
+ 	color: #f4e2be;
+ 	font-weight: 700;
+ }
+
+  .navigation {
+ 	width: 200px;
+ 	margin-left: -180px;
+ }
 
  }
 
  @media screen and (min-width: 600px){
 
+
  	.about-us-team {
  		min-height: 250px;
  	}
  	.about-us-team-profile {
- 		width: 90%;
+ 		width: 100%;
  	}
 
  	.about-us-team-profile > ul {
@@ -593,9 +650,9 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	.about-us-team-profile > ul > li {
  		display: inline-block;
  		position: relative;
- 		height: 100px;
- 		width: 100px;
- 		border-width: 10px;
+ 		height: 90px;
+ 		width: 90px;
+ 		border-width: 8px;
  		margin: 2rem 1.5rem;
  	}
 
@@ -606,6 +663,10 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	.pricing-descri {
  		min-height: 690px;
  	}
+
+ 	 #hamMenu:checked ~ main {
+ 	transform: translateX(150px);
+ }
 
  }
 
@@ -653,6 +714,38 @@ Authors: Richard, Kyrizu, Monali Ghosh
 
  @media screen and (min-width: 950px){
 
+ 	nav {
+ 	min-width: 70px;
+ }
+
+  main {
+ 	margin-left: 70px;
+ }
+
+  .navigation {
+ 	width: 260px;
+ 	margin-left: -220px;
+ }
+
+  .logo-sm {
+ 	left: -90%;
+ 	font-size: 2rem;
+ }
+
+ .menuToggle {
+ 	width: 40px;
+ 	height: 40px;
+ 	top: 25px;
+ 	left: 15px;
+ }
+
+ .menu-line2 {
+ 	top: 10px;
+ }
+ .menu-line3 {
+ 	top: 20px;
+ }
+
  	.about-us-team-profile > ul > li {
  		height: 130px;
  		width: 130px;
@@ -667,8 +760,12 @@ Authors: Richard, Kyrizu, Monali Ghosh
  		font-size: 1.25rem; /* 20px / 16px */
  	}
 
+ 	.pricing {
+ 		width: 90%;
+ 	}
+
  	.pricing-content-wrapper > div {
- 		min-width: 290px;
+ 		min-width: 275px;
  		max-width: 33.3333%;
  		position: absolute;
  		display: block;
@@ -699,6 +796,28 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	.pricing-descri {
  		min-height: 850px;
  	}
+
+ 	 #hamMenu:checked ~ main {
+ 	transform: translateX(185px);
+ }
+
+  #scrollToTop {
+ 	border: 2px solid rgba(255,255,255,0.5);
+ 	font-size: 1.25rem;
+ }
+
+ #scrollToTop div {
+ 	display: block;
+ }
+
+ #scrollToTop:hover i {
+ 	opacity: 0;
+ 	top: -40px;
+ }
+
+ #scrollToTop:hover div {
+ 	top: -10px;
+ }
 
  }
 

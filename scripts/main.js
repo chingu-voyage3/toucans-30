@@ -19,7 +19,7 @@ function scrollToTop(){
 
 let secAboutUs = document.querySelector("#aboutUs");
 let aboutUsYPos = secAboutUs.offsetTop;
-let aboutUsXPos = secAboutUs.offsetLeft;
+let aboutUsXPos = secAboutUs.offsetLeft - 70;
 let btnAboutUs = document.querySelector('[href="#aboutUs"]');
 
 btnAboutUs.addEventListener("click", function(e){
@@ -29,7 +29,7 @@ btnAboutUs.addEventListener("click", function(e){
 
 let secPricing = document.querySelector("#pricing");
 let pricingYPos = secPricing.offsetTop;
-let pricingXPos = secPricing.offsetLeft;
+let pricingXPos = secPricing.offsetLeft - 70;
 let btnPricing = document.querySelector('[href="#pricing"]');
 
 btnPricing.addEventListener("click", function(e){
