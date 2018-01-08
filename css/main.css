@@ -31,6 +31,9 @@ Authors: Richard, Kyrizu, Monali Ghosh
 /* ------------------------------------------------------------ 
  Base Styles
  ------------------------------------------------------------ */
+ html, body {
+ 	height: 100%;
+ }
 
 /*no extra white space for smaller screens
 html,body
@@ -48,10 +51,15 @@ html,body
  	font-weight: 400;
  	color: #000;
  	background: #f4e2be;
+ 	height: 100%;
+ 	overflow-x: hidden;
+
  }
 
  .wrapper {
  	width: 100%;
+ 	height: 100%;
+ 	position: relative;
  }
 
  h1 {
@@ -72,6 +80,158 @@ html,body
  	background: #dc636c;
  }
 
+
+ main {
+ 	height: 100%;
+ 	position: relative;
+ 	transition: all 600ms cubic-bezier(.8,-.5,.2,1);
+ 	margin-left: 70px;
+ }
+
+/* ------------------------------------------------------------ 
+ Navigation Styles
+ ------------------------------------------------------------ */
+
+ nav {
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	height: 100%;
+ 	background: #0f5378;
+ 	z-index: 10;
+ 	min-width: 70px;
+ }
+
+ .navigation {
+ 	position: relative;
+ 	margin: 6rem auto;
+ 	transition: all 600ms cubic-bezier(.8,-.5,.2,1.4);
+ 	width: 260px;
+ 	margin-left: -220px;
+ 	text-align: center;
+ }
+
+ #hamMenu {
+ 	display: none;
+ }
+
+ .menuToggle {
+ 	cursor: pointer;
+ 	position: fixed;
+ 	display: block;
+ 	width: 40px;
+ 	height: 40px;
+ 	top: 25px;
+ 	left: 15px;
+ 	z-index: 11;
+ }
+
+ .menu-line1,
+ .menu-line2,
+ .menu-line3 {
+ 	display: block;
+ 	left: 0;
+ 	position: relative;
+ 	background: #f4e2be;
+ 	height: 5px;
+ 	transition: .4s ease-in-out;
+ }
+
+ .menu-line1 {
+ 	top: 0;
+ }
+ .menu-line2 {
+ 	top: 10px;
+ 	opacity: 1;
+ }
+ .menu-line3 {
+ 	top: 20px;
+ }
+
+ #hamMenu:checked ~ label.menuToggle > div.menu-line1,
+ .menuToggle:hover > div.menu-line1 {
+ 	transform: rotate(135deg);
+ 	top: 13px;
+ }
+
+ #hamMenu:checked ~ label.menuToggle > div.menu-line3,
+ .menuToggle:hover > div.menu-line3 {
+ 	transform: rotate(-135deg);
+ 	top: 3px;
+ }
+
+ #hamMenu:checked ~ label.menuToggle > div.menu-line2,
+ .menuToggle:hover > div.menu-line2 {
+ 	left: -40px;
+ 	opacity: 0;
+ }
+
+ #hamMenu:checked ~ nav > div.navigation {
+ 	margin-left: 0;
+ }
+
+ #hamMenu:checked ~ main {
+ 	transform: translateX(185px);
+ }
+
+
+ .logo-sm {
+ 	position: absolute;
+ 	bottom: 6%;
+ 	left: -90%;
+ 	transform: rotate(-90deg) translate(-6%, 90%);
+ 	font-size: 2rem;
+ 	color: #f4e2be;
+ 	font-weight: 700;
+ }
+
+
+ .navigation > ul {
+ 	list-style-type: none;
+ 	padding: 0;
+ 	margin: 0 1.5rem 0 1rem;
+ 	text-align: center;
+ }
+
+ .navigation > ul > li {
+ 	padding: 1.2rem;
+ }
+
+.logo {
+ 	color: #f4e2be;
+ 	font-size: 2.2rem;
+ 	font-weight: 700;
+ }
+
+ .logo > span,
+  .logo-sm > span {
+ 	font-weight: 400;
+ 	color: #80c3e7;
+ }
+
+ .navlink {
+ 	color: #f1c66a;
+ 	position: relative;
+ }
+
+
+ .navlink:after {
+ 	content: "";
+ 	display: block;
+ 	position: absolute;
+ 	left: 50%;
+ 	transform: translateX(-50%);
+ 	bottom: -5px;
+ 	height: 3px;
+ 	background: #dc636c;
+ 	width: 0;
+ 	transition: width 0.5s ease;
+ }
+
+ .navlink:hover:after {
+ 	color: #000;
+ 	width: 80%;
+ }
 
 
 p {
@@ -853,6 +1013,44 @@ li {
  ------------------------------------------------------------ */
 
 
+ /* ------------------------------------------------------------ 
+ Scroll To Top Button Styles
+ ------------------------------------------------------------ */
+
+ #scrollToTop {
+ 	background: #dc636c;
+ 	border: 2px solid rgba(255,255,255,0.5);
+ 	bottom: 15px;
+ 	color: #f4e2be;
+ 	cursor: pointer;
+ 	display: block;
+ 	font-family: 'Nunito', sans-serif;
+ 	opacity: 0;
+ 	outline: none;
+ 	padding: 0.6rem;
+ 	position: fixed;
+ 	right: 15px;
+ 	transition: 0.5s ease-in-out;
+ 	z-index: 10;
+ }
+
+ #scrollToTop i,
+ #scrollToTop div {
+ 	position: relative;
+ 	opacity: 1;
+ 	top: 0;
+ 	transition: 0.3s ease-in-out;
+ }
+
+ #scrollToTop:hover i {
+ 	opacity: 0;
+ 	top: -40px;
+ }
+
+ #scrollToTop:hover div {
+ 	top: -10px;
+ }
+
 /* ------------------------------------------------------------ 
  Media Queries
  ------------------------------------------------------------ */
@@ -862,6 +1060,10 @@ li {
  	h1 {
  		font-size: 2.5rem; /* 40px / 16px */
  	}
+
+ 	 main {
+ 	margin-left: 50px;
+ }
 
  	.about-us {
  		width: 90%;
@@ -912,34 +1114,81 @@ li {
  	}
 
  	.pricing {
- 		width: 90%;
+ 		width: 100%;
  		position: relative;
  	}
 
  	.pricing-content-wrapper > div {
  		display: block;
- 		min-width: 275px;
- 		width: 90%;
+ 		min-width: 250px;
+ 		width: 80%;
  		position: relative;
  	}
 
  	.box-community,
  	.box-enterprise,
  	.box-pro {
- 		left: 50%;
+ 		left: 65%;
  		top:0;
- 		transform: translateX(-50%);
+ 		transform: translateX(-65%);
  	}
+
+ 	#scrollToTop {
+ 	border: 1px solid rgba(255,255,255,0.5);
+ 	padding: 0.4rem;
+ 	font-size: 1rem;
+ }
+
+  #scrollToTop div {
+  	display: none;
+  }
+
+ #scrollToTop:hover i {
+ 	opacity: 1;
+ 	top: -5px;
+ }
+
+  nav {
+ 	min-width: 50px;
+ }
+
+  .menuToggle {
+ 	width: 30px;
+ 	height: 30px;
+ 	top: 22px;
+ 	left: 9px;
+ }
+
+ .menu-line2 {
+ 	top: 8px;
+ }
+ .menu-line3 {
+ 	top: 16px;
+ }
+
+  .logo-sm {
+ 	left: -125%;
+ 	transform: rotate(-90deg) translate(-6%, 90%);
+ 	font-size: 1.8rem;
+ 	color: #f4e2be;
+ 	font-weight: 700;
+ }
+
+  .navigation {
+ 	width: 200px;
+ 	margin-left: -180px;
+ }
 
  }
 
  @media screen and (min-width: 600px){
 
+
  	.about-us-team {
  		min-height: 250px;
  	}
  	.about-us-team-profile {
- 		width: 90%;
+ 		width: 100%;
  	}
 
  	.about-us-team-profile > ul {
@@ -949,9 +1198,9 @@ li {
  	.about-us-team-profile > ul > li {
  		display: inline-block;
  		position: relative;
- 		height: 100px;
- 		width: 100px;
- 		border-width: 10px;
+ 		height: 90px;
+ 		width: 90px;
+ 		border-width: 8px;
  		margin: 2rem 1.5rem;
  	}
 
@@ -961,7 +1210,11 @@ li {
 
  	.pricing-descri {
  		min-height: 690px;
-	}
+ 	}
+
+ 	 #hamMenu:checked ~ main {
+ 	transform: translateX(150px);
+ }
 
  }
 
@@ -991,7 +1244,7 @@ li {
  		min-width: 200px;
  		max-width: 230px;
  		margin: 1.5rem 0 2rem;
-	}
+ 	}
 
  	.box-community,
  	.box-enterprise,
@@ -1001,13 +1254,45 @@ li {
  		transform: translateX(0);
  	}
 
- 	 .pricing-descri {
+ 	.pricing-descri {
  		min-height: 980px;
-	 }
+ 	}
 
  }
 
-  @media screen and (min-width: 950px){
+ @media screen and (min-width: 950px){
+
+ 	nav {
+ 	min-width: 70px;
+ }
+
+  main {
+ 	margin-left: 70px;
+ }
+
+  .navigation {
+ 	width: 260px;
+ 	margin-left: -220px;
+ }
+
+  .logo-sm {
+ 	left: -90%;
+ 	font-size: 2rem;
+ }
+
+ .menuToggle {
+ 	width: 40px;
+ 	height: 40px;
+ 	top: 25px;
+ 	left: 15px;
+ }
+
+ .menu-line2 {
+ 	top: 10px;
+ }
+ .menu-line3 {
+ 	top: 20px;
+ }
 
  	.about-us-team-profile > ul > li {
  		height: 130px;
@@ -1023,12 +1308,16 @@ li {
  		font-size: 1.25rem; /* 20px / 16px */
  	}
 
- 	 .pricing-content-wrapper > div {
- 		min-width: 290px;
+ 	.pricing {
+ 		width: 90%;
+ 	}
+
+ 	.pricing-content-wrapper > div {
+ 		min-width: 275px;
  		max-width: 33.3333%;
  		position: absolute;
  		display: block;
-	}
+ 	}
 
  	.box-community,
  	.box-enterprise {
@@ -1052,31 +1341,53 @@ li {
  		right: 0;
  	}
 
-	.pricing-descri {
+ 	.pricing-descri {
  		min-height: 850px;
-	}
+ 	}
+
+ 	 #hamMenu:checked ~ main {
+ 	transform: translateX(185px);
+ }
+
+  #scrollToTop {
+ 	border: 2px solid rgba(255,255,255,0.5);
+ 	font-size: 1.25rem;
+ }
+
+ #scrollToTop div {
+ 	display: block;
+ }
+
+ #scrollToTop:hover i {
+ 	opacity: 0;
+ 	top: -40px;
+ }
+
+ #scrollToTop:hover div {
+ 	top: -10px;
+ }
 
  }
 
 
  @media screen and (min-width: 1050px){
 
- 	 .about-us-intro {
- 	display: inline-block;
- 	width: 48%;
- }
+ 	.about-us-intro {
+ 		display: inline-block;
+ 		width: 48%;
+ 	}
 
-	.pricing-descri {
+ 	.pricing-descri {
  		min-height: 800px;
-	}
+ 	}
 
  }
 
-  @media screen and (min-width: 1350px){
+ @media screen and (min-width: 1350px){
 
-	.pricing-descri {
+ 	.pricing-descri {
  		min-height: 720px;
-	}
+ 	}
 
  }
  
