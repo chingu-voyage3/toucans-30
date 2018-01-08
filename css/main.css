@@ -35,16 +35,6 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	height: 100%;
  }
 
-/*no extra white space for smaller screens
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}*/
-
  body {
  	font-family: 'Nunito', sans-serif;
  	font-size: 1.25rem; /* 20px / 16px */
@@ -233,25 +223,8 @@ html,body
  	width: 80%;
  }
 
-
 p {
     font-family: 'Nunito', monospace;
-}
-/* ------------------------------------------------------------
- Nav Styles
------------------------------------------------------------- */
-li {
-    display: inline-block;
-    padding-left: 15px;
-    padding-right: 15px;
-    
-    
-}
-.nav{
-    display: flex;
-    background: lightgrey;
-    width: 100%;
-    text-align: center;
 }
 
 /* ------------------------------------------------------------ 
@@ -261,9 +234,11 @@ li {
 #home{
     background: #73C4EF;
 }
+
 .container{
     display: flex;
 }
+
 .adj{
     justify-content: center;
     align-items: center;
@@ -503,6 +478,7 @@ li {
     
     border: 2px solid rgba(0,161,213,1);
     -webkit-border-radius: 25px / 50px;
+      -moz-border-radius: 25px / 50px; 
     border-radius: 25px / 50px;
     
     font: normal 50%/normal Tahoma, Geneva, sans-serif;
@@ -579,7 +555,10 @@ li {
     
     top: -18px;
     left: 60px;
-    border-radius: 50%;
+    
+   -webkit-border-radius: 50%; 
+      -moz-border-radius: 50%; 
+           border-radius: 50%;
     
     background: -webkit-linear-gradient(180deg, rgba(216, 216, 216, 0.8) 0, rgba(216, 216, 216,0.4) 38%, rgba(216, 216, 216,0.2) 51%, rgba(156, 156, 156,0.2) 99%, rgba(86, 86, 86,0.2) 100%), radial-gradient(at 79% 43%, rgb(138, 145, 160) 0, rgb(159, 166, 182) 82%, rgb(115, 125, 149) 58%, rgb(165, 174, 195) 35%, rgb(167, 176, 195) 100%), rgba(0,0,0,0);
     background: -moz-linear-gradient(180deg, rgba(216, 216, 216, 0.8) 0, rgba(216, 216, 216,0.4) 38%, rgba(216, 216, 216,0.2) 51%, rgba(156, 156, 156,0.2) 99%, rgba(86, 86, 86,0.2) 100%), radial-gradient(at 79% 43%, rgb(138, 145, 160) 0, rgb(159, 166, 182) 82%, rgb(115, 125, 149) 58%, rgb(165, 174, 195) 35%, rgb(167, 176, 195) 100%), rgba(0,0,0,0);
@@ -625,7 +604,11 @@ li {
     background: -webkit-linear-gradient(180deg, rgba(255,255,255,0.8) 0, rgba(255,255,255,0.4) 18%, rgba(255,255,255,0.2) 51%, rgba(180,180,180,0.2) 99%, rgba(180,180,180,0.2) 100%), radial-gradient(at 90% 30%, rgb(232,234,249) 0, rgb(165,165,198) 92%, rgb(150,161,188) 58%, rgb(107,122,155) 35%, rgb(87,98,124) 100%), rgba(0,0,0,0);
     background: -moz-linear-gradient(180deg, rgba(255,255,255,0.8) 0, rgba(255,255,255,0.4) 18%, rgba(255,255,255,0.2) 51%, rgba(180,180,180,0.2) 99%, rgba(180,180,180,0.2) 100%), radial-gradient(at 90% 30%, rgb(232,234,249) 0, rgb(165,165,198) 92%, rgb(150,161,188) 58%, rgb(107,122,155) 35%, rgb(87,98,124) 100%), rgba(0,0,0,0);
     background: linear-gradient(180deg, rgba(255,255,255,0.8) 0, rgba(255,255,255,0.4) 18%, rgba(255,255,255,0.2) 51%, rgba(180,180,180,0.2) 99%, rgba(180,180,180,0.2) 100%), radial-gradient(at 90% 30%, rgb(232,234,249) 0, rgb(165,165,198) 92%, rgb(150,161,188) 58%, rgb(107,122,155) 35%, rgb(87,98,124) 100%), rgba(0,0,0,0);
-    border-radius: 50%;
+    
+    
+   -webkit-border-radius: 50%; 
+      -moz-border-radius: 50%; 
+           border-radius: 50%;
 }
 
 .left-upper-arm{
@@ -651,7 +634,10 @@ li {
     
     top: 8px;
     left: 9px;
-    border-radius: 50%;
+    
+   -webkit-border-radius: 50%; 
+      -moz-border-radius: 50%; 
+           border-radius: 50%;
     
     background: -webkit-linear-gradient(180deg, rgba(255,255,255,0.8) 0, rgba(255,255,255,0.4) 18%, rgba(255,255,255,0.2) 51%, rgba(180,180,180,0.2) 99%, rgba(180,180,180,0.2) 100%), radial-gradient(at 90% 30%, rgb(232,234,249) 0, rgb(165,165,198) 92%, rgb(150,161,188) 58%, rgb(107,122,155) 35%, rgb(87,98,124) 100%), rgba(0,0,0,0);
     background: -moz-linear-gradient(180deg, rgba(255,255,255,0.8) 0, rgba(255,255,255,0.4) 18%, rgba(255,255,255,0.2) 51%, rgba(180,180,180,0.2) 99%, rgba(180,180,180,0.2) 100%), radial-gradient(at 90% 30%, rgb(232,234,249) 0, rgb(165,165,198) 92%, rgb(150,161,188) 58%, rgb(107,122,155) 35%, rgb(87,98,124) 100%), rgba(0,0,0,0);
@@ -833,6 +819,7 @@ li {
     width: 100%;
     height: 17.5vw;
     background: #F1C66A;
+    
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 }
