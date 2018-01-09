@@ -37,6 +37,16 @@ btnPricing.addEventListener("click", function(e){
 	e.preventDefault();
 });
 
+let featureSec = document.querySelector("#features");
+let featureYPos = featureSec.offsetTop;
+let featureXPos = featureSec.offsetLeft - 70;
+let btnFeature = document.querySelector('[href="#features"]');
+
+btnPricing.addEventListener("click", function(e){
+	window.scroll({ top: featureYPos, left: featureXPos, behavior: "smooth" });
+	e.preventDefault();
+});
+
 //Anchor scroll
 let refLink = document.querySelector("#slack-ref");
 
