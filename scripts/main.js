@@ -27,6 +27,17 @@ btnAboutUs.addEventListener("click", function(e){
 	e.preventDefault();
 });
 
+let featureSec = document.querySelector("#features");
+let featureYPos = featureSec.offsetTop;
+let featureXPos = featureSec.offsetLeft;
+let btnFeature = document.querySelector('[href="#features"]');
+
+btnFeature.addEventListener("click", function(e){
+	window.scroll({ top: featureYPos, left: featureXPos, behavior: "smooth" });
+    e.preventDefault();
+	
+});
+
 let secPricing = document.querySelector("#pricing");
 let pricingYPos = secPricing.offsetTop;
 let pricingXPos = secPricing.offsetLeft - 70;
@@ -34,16 +45,6 @@ let btnPricing = document.querySelector('[href="#pricing"]');
 
 btnPricing.addEventListener("click", function(e){
 	window.scroll({ top: pricingYPos, left: pricingXPos, behavior: "smooth" });
-	e.preventDefault();
-});
-
-let featureSec = document.querySelector("#features");
-let featureYPos = featureSec.offsetTop;
-let featureXPos = featureSec.offsetLeft - 70;
-let btnFeature = document.querySelector('[href="#features"]');
-
-btnPricing.addEventListener("click", function(e){
-	window.scroll({ top: featureYPos, left: featureXPos, behavior: "smooth" });
 	e.preventDefault();
 });
 

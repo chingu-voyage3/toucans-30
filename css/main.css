@@ -286,7 +286,11 @@ p {
 .robot{
     position: relative;
     right:3px;
-    top: 13px;
+    top: 13px;  
+    height: 240px;
+    
+    
+    animation: robotFloat 4s infinite linear;   
 }
 
 
@@ -302,7 +306,7 @@ p {
     justify-content: center;
     background: #e7eaec;
     z-index: 100;
-    top: 3px;
+    top: 0px;
     padding: 5px;
     
     -webkit-border-radius: 50%; 
@@ -312,6 +316,8 @@ p {
     -webkit-box-shadow: inset -4px -4px 0px 1px #dcd9d9;
        -moz-box-shadow: inset -4px -4px 0px 1px #dcd9d9;
             box-shadow: inset -4px -4px 0px 1px #dcd9d9;
+    
+    animation: robotHeadFloat 4.01s infinite linear;   
 }
 
 /* ***********
@@ -576,6 +582,7 @@ p {
     background: -webkit-linear-gradient(180deg, rgba(216, 216, 216, 0.8) 0, rgba(216, 216, 216,0.4) 38%, rgba(216, 216, 216,0.2) 51%, rgba(156, 156, 156,0.2) 99%, rgba(86, 86, 86,0.2) 100%), radial-gradient(at 79% 43%, rgb(138, 145, 160) 0, rgb(159, 166, 182) 82%, rgb(115, 125, 149) 58%, rgb(165, 174, 195) 35%, rgb(167, 176, 195) 100%), rgba(0,0,0,0);
     background: -moz-linear-gradient(180deg, rgba(216, 216, 216, 0.8) 0, rgba(216, 216, 216,0.4) 38%, rgba(216, 216, 216,0.2) 51%, rgba(156, 156, 156,0.2) 99%, rgba(86, 86, 86,0.2) 100%), radial-gradient(at 79% 43%, rgb(138, 145, 160) 0, rgb(159, 166, 182) 82%, rgb(115, 125, 149) 58%, rgb(165, 174, 195) 35%, rgb(167, 176, 195) 100%), rgba(0,0,0,0);
     background: linear-gradient(180deg, rgba(216, 216, 216, 0.8) 0, rgba(216, 216, 216,0.4) 38%, rgba(216, 216, 216,0.2) 51%, rgba(156, 156, 156,0.2) 99%, rgba(86, 86, 86,0.2) 100%), radial-gradient(at 7% 43%, rgb(138, 145, 160) 0, rgb(159, 166, 182) 62%, rgb(115, 125, 149) 58%, rgb(165, 174, 195) 35%, rgb(167, 176, 195) 100%), rgba(0,0,0,0);
+    
 }
 
 .right-lower-arm{
@@ -831,11 +838,12 @@ p {
  Features Styles
  ------------------------------------------------------------ */
 #features{
-    background: #DC636C;
     padding: 10px;
     margin-top: -20px;
     min-height: 300px;
     text-align: center;
+    
+    background: #DC636C;
 }
 
 .feature-list{
@@ -1474,11 +1482,11 @@ p {
      }
      
      .right-arm{
-         left: 150px;
+         left: 137px;
      }
      
      .left-arm{
-         left: -25px;
+         left: 63px;
      }
      
      .legs-container{
@@ -1491,6 +1499,10 @@ p {
      
      .robot-container{
         padding-top: 0px;
+     }
+     
+     .robot{
+         top: 0px;
      }
 }
 
@@ -1507,61 +1519,6 @@ p {
       transform: translateY(0%);
     }
     25%{
-      transform: translateY(50%);
-    }
-    50% { 
-        transform: translateY(100%);
-    }
-    75%{
-      transform: translateY(50%);
-    }
-    100%{
-      transform: translateY(0%);
-    }
-}
-
-@keyframes robotHeadFloat { 
-    0%{
-      transform: translateY(2%);
-    }
-    25%{
-      transform: translateY(50%);
-    }
-    50% { 
-        transform: translateY(98%);
-    }
-    75%{
-      transform: translateY(50%);
-    }
-    100%{
-      transform: translateY(2%);
-    }
-}
-
-/*Arms rotation*/
-@keyframes robotLeftArmRotation { 
-    0%{
-      transform: translateY(0%);
-    }
-    25%{
-      transform: translateY(50%);
-    }
-    50% { 
-        transform: translateY(100%);
-    }
-    75%{
-      transform: translateY(50%);
-    }
-    100%{
-      transform: translateY(0%);
-    }
-}
-
-@keyframes robotRightArmRotation { 
-    0%{
-      transform: translateY(0%);
-    }
-    25%{
       transform: translateY(5%);
     }
     50% { 
@@ -1574,6 +1531,27 @@ p {
       transform: translateY(0%);
     }
 }
+
+@keyframes robotHeadFloat { 
+    0%{
+      transform: translateY(0.5%);
+    }
+    25%{
+      transform: translateY(2%);
+    }
+    50% { 
+        transform: translateY(5%);
+    }
+    75%{
+      transform: translateY(2%);
+    }
+    100%{
+      transform: translateY(0.5%);
+    }
+}
+
+/*Arms rotation*/
+
 
 
 
