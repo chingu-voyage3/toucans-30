@@ -604,6 +604,9 @@ p {
     -webkit-transform: rotate(-125deg) skewX(-8deg); 
     -moz-transform: rotate(-125deg) skewX(-8deg); 
     transform-origin: bottom left;
+    
+    
+    animation: robotArmRotation 4.0s infinite linear; 
 }
 
 /* ***********
@@ -701,6 +704,7 @@ p {
        -moz-transform: rotate(-125deg) skewX(-8deg); 
             transform: rotate(-125deg) skewX(-8deg);
     transform-origin: bottom left;
+    animation: robotArmRotation 4.0s infinite linear;
 }
 
 .legs-container{
@@ -1551,9 +1555,43 @@ p {
 }
 
 /*Arms rotation*/
+@keyframes robotArmRotation { 
+    0%{
+      transform: rotate(-125deg);
+    }
+    25%{
+      transform: rotate(-120deg);
+    }
+    50% { 
+        transform: rotate(-115deg);
+    }
+    75%{
+      transform: rotate(-120deg);
+    }
+    100%{
+      transform: rotate(-125deg);
+    }
+}
 
+/*Float beam*/
 
-
+@keyframes floatBeam { 
+    0%{
+      transform: rotate(-125deg);
+    }
+    25%{
+      transform: rotate(-129deg);
+    }
+    50% { 
+        transform: rotate(-133deg);
+    }
+    75%{
+      transform: rotate(-129deg);
+    }
+    100%{
+      transform: rotate(-125deg);
+    }
+}
 
 @keyframes fadeAway  {
     0%{
