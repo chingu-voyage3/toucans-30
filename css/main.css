@@ -27,6 +27,16 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	clear: both;
  }
 
+ a {
+    color: #c1414b;
+    transition: all 0.5s ease;
+} 
+
+a:hover,
+a:visited,
+a:active {
+    color: #000;
+}
 
 /* ------------------------------------------------------------ 
  Base Styles
@@ -41,9 +51,7 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	font-weight: 400;
  	color: #000;
  	background: #f4e2be;
- 	height: 100%;
  	overflow-x: hidden;
-
  }
 
  .wrapper {
@@ -199,11 +207,11 @@ Authors: Richard, Kyrizu, Monali Ghosh
  	color: #80c3e7;
  }
 
- .navlink {
- 	color: #f1c66a;
- 	position: relative;
+ a.navlink,
+ a.navlink:hover {
+    color: #f1c66a;
+    position: relative;
  }
-
 
  .navlink:after {
  	content: "";
@@ -942,7 +950,6 @@ p {
  	max-width: 1300px;
  	margin: 0 auto;
  	text-align: center;
-
  }
 
  .pricing-content-wrapper {
@@ -961,7 +968,7 @@ p {
  	box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.1);
  }
 
- .box-community,
+/* .box-community,
  .box-enterprise {
  	top: 20px;
  }
@@ -979,7 +986,7 @@ p {
 
  .box-enterprise {
  	right: -20px;
- }
+ }*/
 
  .pricing input {
  	border: none;
@@ -992,11 +999,12 @@ p {
  	box-shadow: 0 -5px 7px 2px rgba(0, 0, 0, 0.1);
  	cursor: pointer;
  	height: 50px;
- 	transition: all 0.3s ease;
+             width: 40%;
+ 	transition: all 0.2s ease;
  }
 
  .pricing input:hover {
- 	height: 60px;
+ 	width: 100%;
  }
 
  .pricing-boxhead {
@@ -1062,6 +1070,107 @@ p {
  Footer Styles
  ------------------------------------------------------------ */
 
+ footer {
+    background: #e0cca4;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 600ms cubic-bezier(.8,-.5,.2,1);
+    margin-left: 70px;
+}
+
+.footerInfo {
+    width: 60%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.footerInfo_contactInfo,
+.footerInfo_socialmediaInfo {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    margin-top: 1rem;
+}
+
+.footerInfo_socialmediaInfo {
+    text-align: right;
+}
+
+.contactInfo_head,
+.contactInfo_email,
+.socialmediaInfo_head {
+    margin-bottom: 2rem;
+}
+
+.contactInfo_phone,
+.info_address {
+    margin-bottom: -0.5rem;
+}
+
+.contactInfo_head,
+.socialmediaInfo_head {
+    font-weight: 700;
+}
+
+.socialmediaInfo_icons  {
+    font-size: 1.5rem;
+}
+
+.icons {
+    height: 25px;
+    width: 25px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 0.5rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.icons:last-child {
+    margin-right: 0;
+}
+
+.icons:hover {
+    background: #dc636c;
+    color: #e6d3ac;
+}
+
+#newsletter {
+    width: 100%;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    outline: none;
+    font-size: 1rem;
+    max-width: 220px;
+    margin-bottom: 1.5rem;
+    font-family: inherit;
+}
+
+#newsletter:focus {
+    border: 1px solid  #dc636c;
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 1.4rem
+}
+
+input::placeholder {
+    color: black;
+}
+
+.copyright {
+    border-top: 1px solid #b9a67e;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.copyright_team {
+    color: #c1414b;
+}
+
 
  /* ------------------------------------------------------------ 
  Scroll To Top Button Styles
@@ -1111,7 +1220,8 @@ p {
  		font-size: 2.5rem; /* 40px / 16px */
  	}
 
- 	 main {
+ 	 main,
+     footer {
  	margin-left: 50px;
  }
 
@@ -1175,6 +1285,10 @@ p {
  		position: relative;
  	}
 
+                 .pricing input {
+                        width: 60%;
+            }
+
  	.box-community,
  	.box-enterprise,
  	.box-pro {
@@ -1229,6 +1343,26 @@ p {
  	margin-left: -180px;
  }
 
+     .footerInfo {
+        width: 100%;
+    }
+
+    .footerInfo_contactInfo,
+    .footerInfo_socialmediaInfo {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .socialmediaInfo_icons  {
+    font-size: 1.1rem;
+}
+
+    .icons {
+        height: 15px;
+        width: 15px;
+    }
+
  }
 
  @media screen and (min-width: 600px){
@@ -1261,6 +1395,10 @@ p {
  	.pricing-descri {
  		min-height: 690px;
  	}
+
+            .pricing input {
+                         width: 40%;
+            }
 
  	 #hamMenu:checked ~ main {
  	transform: translateX(150px);
@@ -1308,6 +1446,29 @@ p {
  		min-height: 980px;
  	}
 
+          .pricing input {
+                        width: 60%;
+             }
+
+             .footerInfo {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.footerInfo_contactInfo,
+.footerInfo_socialmediaInfo {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+
+.footerInfo_socialmediaInfo {
+    text-align: right;
+}
+
+   .footerInfo_contactInfo {
+        text-align: left;
+    }
  }
 
  @media screen and (min-width: 950px){
@@ -1362,14 +1523,13 @@ p {
  		width: 90%;
  	}
 
- 	.pricing-content-wrapper > div {
- 		min-width: 275px;
- 		max-width: 33.3333%;
- 		position: absolute;
- 		display: block;
- 	}
+ .pricing-content-wrapper > div {
+     min-width: 250px;
+     max-width: 32%;
+     margin-bottom: 3rem;
+ }
 
- 	.box-community,
+ 	/*.box-community,
  	.box-enterprise {
  		top: 20px;
  	}
@@ -1389,10 +1549,10 @@ p {
  		left: 100%;
  		transform: translateX(-100%);
  		right: 0;
- 	}
+ 	}*/
 
  	.pricing-descri {
- 		min-height: 850px;
+ 		min-height: 940px;
  	}
 
  	 #hamMenu:checked ~ main {
@@ -1427,9 +1587,18 @@ p {
  		width: 48%;
  	}
 
- 	.pricing-descri {
- 		min-height: 800px;
- 	}
+ 	 .pricing-content-wrapper > div {
+     min-width: 250px;
+     max-width: 32%;
+ }
+
+.pricing-descri {
+    min-height: 845px;
+}
+      .pricing input {
+    width: 50%;
+
+ }
 
  }
 
@@ -1438,6 +1607,11 @@ p {
  	.pricing-descri {
  		min-height: 720px;
  	}
+
+          .pricing input {
+    width: 40%;
+
+ }
 
  }
  
