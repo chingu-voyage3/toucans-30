@@ -8,23 +8,34 @@ Authors: Richard, Kyrizu, Monali Ghosh
  ------------------------------------------------------------ */
 
  .italic {
- 	font-style: italic;
+    font-style: italic;
  }
 
  .small-font {
- 	font-size: 1rem; /* 16px / 16px */
+    font-size: 1rem; /* 16px / 16px */
  }
 
  .float-left {
- 	float: left;
+    float: left;
  }
 
  .float-right {
- 	float: right;
+    float: right;
  }
 
  .clear-float {
- 	clear: both;
+    clear: both;
+ }
+
+ a {
+    color: #c1414b;
+    transition: all 0.5s ease;
+ } 
+
+ a:hover,
+ a:visited,
+ a:active {
+    color: #000;
  }
 
 
@@ -32,50 +43,48 @@ Authors: Richard, Kyrizu, Monali Ghosh
  Base Styles
  ------------------------------------------------------------ */
  html, body {
- 	height: 100%;
+    height: 100%;
  }
 
  body {
- 	font-family: 'Nunito', sans-serif;
- 	font-size: 1.25rem; /* 20px / 16px */
- 	font-weight: 400;
- 	color: #000;
- 	background: #f4e2be;
- 	height: 100%;
- 	overflow-x: hidden;
-
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.25rem; /* 20px / 16px */
+    font-weight: 400;
+    color: #000;
+    background: #f4e2be;
+    overflow-x: hidden;
  }
 
  .wrapper {
- 	width: 100%;
- 	height: 100%;
- 	position: relative;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
  }
 
  h1 {
- 	font-family: 'Josefin Sans', sans-serif;
- 	font-size: 3rem; /* 48px / 16px */
- 	font-weight: 600;
- 	color: #000;
- 	text-align: center;
- 	text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem; /* 48px / 16px */
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
  }
 
  h1:after {
- 	content: "";
- 	display: block;
- 	height: 3px;
- 	width: 130px;
- 	margin: -6px auto 0;
- 	background: #dc636c;
+    content: "";
+    display: block;
+    height: 3px;
+    width: 130px;
+    margin: -6px auto 0;
+    background: #dc636c;
  }
 
 
  main {
- 	height: 100%;
- 	position: relative;
- 	transition: all 600ms cubic-bezier(.8,-.5,.2,1);
- 	margin-left: 70px;
+    height: 100%;
+    position: relative;
+    transition: all 600ms cubic-bezier(.8,-.5,.2,1);
+    margin-left: 70px;
  }
 
 /* ------------------------------------------------------------ 
@@ -83,147 +92,148 @@ Authors: Richard, Kyrizu, Monali Ghosh
  ------------------------------------------------------------ */
 
  nav {
- 	position: fixed;
- 	top: 0;
- 	left: 0;
- 	height: 100%;
- 	background: #0f5378;
- 	z-index: 10;
- 	min-width: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #0f5378;
+    z-index: 10;
+    min-width: 70px;
  }
 
  .navigation {
- 	position: relative;
- 	margin: 6rem auto;
- 	transition: all 600ms cubic-bezier(.8,-.5,.2,1.4);
- 	width: 260px;
- 	margin-left: -220px;
- 	text-align: center;
+    position: relative;
+    margin: 6rem auto;
+    transition: all 600ms cubic-bezier(.8,-.5,.2,1.4);
+    width: 260px;
+    margin-left: -220px;
+    text-align: center;
  }
 
  #hamMenu {
- 	display: none;
+    display: none;
  }
 
  .menuToggle {
- 	cursor: pointer;
- 	position: fixed;
- 	display: block;
- 	width: 40px;
- 	height: 40px;
- 	top: 25px;
- 	left: 15px;
- 	z-index: 11;
+    cursor: pointer;
+    position: fixed;
+    display: block;
+    width: 40px;
+    height: 40px;
+    top: 25px;
+    left: 15px;
+    z-index: 11;
  }
 
  .menu-line1,
  .menu-line2,
  .menu-line3 {
- 	display: block;
- 	left: 0;
- 	position: relative;
- 	background: #f4e2be;
- 	height: 5px;
- 	transition: .4s ease-in-out;
+    display: block;
+    left: 0;
+    position: relative;
+    background: #f4e2be;
+    height: 5px;
+    transition: .4s ease-in-out;
  }
 
  .menu-line1 {
- 	top: 0;
+    top: 0;
  }
  .menu-line2 {
- 	top: 10px;
- 	opacity: 1;
+    top: 10px;
+    opacity: 1;
  }
  .menu-line3 {
- 	top: 20px;
+    top: 20px;
  }
 
  #hamMenu:checked ~ label.menuToggle > div.menu-line1,
  .menuToggle:hover > div.menu-line1 {
- 	transform: rotate(135deg);
- 	top: 13px;
+    transform: rotate(135deg);
+    top: 13px;
  }
 
  #hamMenu:checked ~ label.menuToggle > div.menu-line3,
  .menuToggle:hover > div.menu-line3 {
- 	transform: rotate(-135deg);
- 	top: 3px;
+    transform: rotate(-135deg);
+    top: 3px;
  }
 
  #hamMenu:checked ~ label.menuToggle > div.menu-line2,
  .menuToggle:hover > div.menu-line2 {
- 	left: -40px;
- 	opacity: 0;
+    left: -40px;
+    opacity: 0;
  }
 
  #hamMenu:checked ~ nav > div.navigation {
- 	margin-left: 0;
+    margin-left: 0;
  }
 
- #hamMenu:checked ~ main {
- 	transform: translateX(185px);
+ #hamMenu:checked ~ main,
+  #hamMenu:checked ~ footer {
+    transform: translateX(185px);
  }
 
 
  .logo-sm {
- 	position: absolute;
- 	bottom: 6%;
- 	left: -90%;
- 	transform: rotate(-90deg) translate(-6%, 90%);
- 	font-size: 2rem;
- 	color: #f4e2be;
- 	font-weight: 700;
+    position: absolute;
+    bottom: 6%;
+    left: -90%;
+    transform: rotate(-90deg) translate(-6%, 90%);
+    font-size: 2rem;
+    color: #f4e2be;
+    font-weight: 700;
  }
 
 
  .navigation > ul {
- 	list-style-type: none;
- 	padding: 0;
- 	margin: 0 1.5rem 0 1rem;
- 	text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 1.5rem 0 1rem;
+    text-align: center;
  }
 
  .navigation > ul > li {
- 	padding: 1.2rem;
+    padding: 1.2rem;
  }
 
-.logo {
- 	color: #f4e2be;
- 	font-size: 2.2rem;
- 	font-weight: 700;
+ .logo {
+    color: #f4e2be;
+    font-size: 2.2rem;
+    font-weight: 700;
  }
 
  .logo > span,
-  .logo-sm > span {
- 	font-weight: 400;
- 	color: #80c3e7;
+ .logo-sm > span {
+    font-weight: 400;
+    color: #80c3e7;
  }
 
- .navlink {
- 	color: #f1c66a;
- 	position: relative;
+ a.navlink,
+ a.navlink:hover {
+    color: #f1c66a;
+    position: relative;
  }
-
 
  .navlink:after {
- 	content: "";
- 	display: block;
- 	position: absolute;
- 	left: 50%;
- 	transform: translateX(-50%);
- 	bottom: -5px;
- 	height: 3px;
- 	background: #dc636c;
- 	width: 0;
- 	transition: width 0.5s ease;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    height: 3px;
+    background: #dc636c;
+    width: 0;
+    transition: width 0.5s ease;
  }
 
  .navlink:hover:after {
- 	color: #000;
- 	width: 80%;
+    color: #000;
+    width: 80%;
  }
 
-p {
+ p {
     font-family: 'Nunito', monospace;
 }
 
@@ -756,7 +766,7 @@ p {
  }
 
  .about-us-team {
- 	background: #dfcaa1;
+ 	background: #e0cca4;
  	text-align: center;
  	min-height: 285px;
  }
@@ -944,7 +954,6 @@ p {
  	max-width: 1300px;
  	margin: 0 auto;
  	text-align: center;
-
  }
 
  .pricing-content-wrapper {
@@ -963,7 +972,7 @@ p {
  	box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.1);
  }
 
- .box-community,
+/* .box-community,
  .box-enterprise {
  	top: 20px;
  }
@@ -981,7 +990,7 @@ p {
 
  .box-enterprise {
  	right: -20px;
- }
+ }*/
 
  .pricing input {
  	border: none;
@@ -989,16 +998,15 @@ p {
  	padding: 1rem;
  	text-transform: uppercase;
  	font-size: 1rem;
- 	border-top-left-radius: 5px;
- 	border-top-right-radius: 5px;
  	box-shadow: 0 -5px 7px 2px rgba(0, 0, 0, 0.1);
  	cursor: pointer;
  	height: 50px;
- 	transition: all 0.3s ease;
+             width: 40%;
+ 	transition: all 0.2s ease;
  }
 
  .pricing input:hover {
- 	height: 60px;
+ 	width: 100%;
  }
 
  .pricing-boxhead {
@@ -1064,6 +1072,106 @@ p {
  Footer Styles
  ------------------------------------------------------------ */
 
+ footer {
+    background: #e0cca4;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 600ms cubic-bezier(.8,-.5,.2,1);
+    margin-left: 70px;
+}
+
+.footerInfo {
+    width: 60%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.footerInfo_contactInfo,
+.footerInfo_socialmediaInfo {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    margin-top: 1rem;
+}
+
+.footerInfo_socialmediaInfo {
+    text-align: right;
+}
+
+.contactInfo_head,
+.contactInfo_email,
+.socialmediaInfo_head {
+    margin-bottom: 2rem;
+}
+
+.contactInfo_phone,
+.info_address {
+    margin-bottom: -0.5rem;
+}
+
+.contactInfo_head,
+.socialmediaInfo_head {
+    font-weight: 700;
+}
+
+.socialmediaInfo_icons  {
+    font-size: 1.5rem;
+}
+
+.icons {
+    height: 25px;
+    width: 25px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 0.5rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.icons:last-child {
+    margin-right: 0;
+}
+
+.icons:hover {
+    background: #dc636c;
+    color: #e6d3ac;
+}
+
+#newsletter {
+    width: 100%;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    outline: none;
+    font-size: 1rem;
+    max-width: 220px;
+    margin-bottom: 1.5rem;
+    font-family: inherit;
+}
+
+#newsletter:focus {
+    border: 1px solid  #dc636c;
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 1.4rem
+}
+
+input::placeholder {
+    color: black;
+}
+
+.copyright {
+    border-top: 1px solid #b9a67e;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.copyright_team {
+    color: #c1414b;
+}
+
 
  /* ------------------------------------------------------------ 
  Scroll To Top Button Styles
@@ -1113,7 +1221,8 @@ p {
  		font-size: 2.5rem; /* 40px / 16px */
  	}
 
- 	 main {
+ 	 main,
+     footer {
  	margin-left: 50px;
  }
 
@@ -1177,6 +1286,10 @@ p {
  		position: relative;
  	}
 
+                 .pricing input {
+                        width: 60%;
+            }
+
  	.box-community,
  	.box-enterprise,
  	.box-pro {
@@ -1231,6 +1344,30 @@ p {
  	margin-left: -180px;
  }
 
+     .footerInfo {
+        width: 100%;
+    }
+
+    .footerInfo_contactInfo,
+    .footerInfo_socialmediaInfo {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+.info_addressCity {
+    margin-bottom: 0;
+}
+
+    .socialmediaInfo_icons  {
+    font-size: 1.1rem;
+}
+
+    .icons {
+        height: 15px;
+        width: 15px;
+    }
+
  }
 
  @media screen and (min-width: 600px){
@@ -1264,7 +1401,21 @@ p {
  		min-height: 690px;
  	}
 
- 	 #hamMenu:checked ~ main {
+            .pricing input {
+                         width: 40%;
+            }
+
+            .socialmediaInfo_icons  {
+    font-size: 1.5rem;
+}
+
+            .icons {
+    height: 25px;
+    width: 25px;
+}
+
+ 	 #hamMenu:checked ~ main,
+     #hamMenu:checked ~ footer {
  	transform: translateX(150px);
  }
 
@@ -1310,6 +1461,29 @@ p {
  		min-height: 980px;
  	}
 
+          .pricing input {
+                        width: 60%;
+             }
+
+             .footerInfo {
+                        width: 90%;
+                        max-width: 1300px;
+                         margin: 0 auto;
+            }
+.footerInfo_contactInfo,
+.footerInfo_socialmediaInfo {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+
+.footerInfo_socialmediaInfo {
+    text-align: right;
+}
+
+   .footerInfo_contactInfo {
+        text-align: left;
+    }
  }
 
  @media screen and (min-width: 950px){
@@ -1318,7 +1492,8 @@ p {
  	min-width: 70px;
  }
 
-  main {
+  main,
+  footer {
  	margin-left: 70px;
  }
 
@@ -1364,14 +1539,13 @@ p {
  		width: 90%;
  	}
 
- 	.pricing-content-wrapper > div {
- 		min-width: 275px;
- 		max-width: 33.3333%;
- 		position: absolute;
- 		display: block;
- 	}
+ .pricing-content-wrapper > div {
+     min-width: 250px;
+     max-width: 32%;
+     margin-bottom: 3rem;
+ }
 
- 	.box-community,
+ 	/*.box-community,
  	.box-enterprise {
  		top: 20px;
  	}
@@ -1391,13 +1565,14 @@ p {
  		left: 100%;
  		transform: translateX(-100%);
  		right: 0;
- 	}
+ 	}*/
 
  	.pricing-descri {
- 		min-height: 850px;
+ 		min-height: 940px;
  	}
 
- 	 #hamMenu:checked ~ main {
+ 	 #hamMenu:checked ~ main,
+     #hamMenu:checked ~ footer {
  	transform: translateX(185px);
  }
 
@@ -1429,17 +1604,31 @@ p {
  		width: 48%;
  	}
 
- 	.pricing-descri {
- 		min-height: 800px;
- 	}
+ 	 .pricing-content-wrapper > div {
+     min-width: 250px;
+     max-width: 32%;
+ }
+
+.pricing-descri {
+    min-height: 845px;
+}
+      .pricing input {
+    width: 50%;
+
+ }
 
  }
 
  @media screen and (min-width: 1350px){
 
  	.pricing-descri {
- 		min-height: 720px;
+ 		min-height: 750px;
  	}
+
+          .pricing input {
+    width: 40%;
+
+ }
 
  }
  
