@@ -1795,12 +1795,19 @@ input::placeholder {
       -o-transform: rotate(-125deg);
       transform: rotate(-125deg);
     }
-    50% { 
+    48% { 
         -webkit-transform: rotate(-140deg);
       -moz-transform: rotate(-140deg);
       -ms-transform: rotate(-140deg);
       -o-transform: rotate(-140deg);
         transform: rotate(-140deg);
+    }
+    60%{
+        -webkit-transform: rotate(-133deg);
+      -moz-transform: rotate(-133deg);
+      -ms-transform: rotate(-133deg);
+      -o-transform: rotate(-133deg);
+        transform: rotate(-133deg);
     }
     100%{
       -webkit-transform: rotate(-125deg);
@@ -1814,19 +1821,19 @@ input::placeholder {
 /*Float beam*/
 @keyframes floatBeam { 
      0%   { 
-      -webkit-box-shadow: 0px 6px 20px 2px #1a72cc;
-      -moz-box-shadow: 0px 6px 20px 2px #1a72cc;
-      box-shadow: 0px 6px 20px 2px #1a72cc;
-    }
-    50%  { 
       -webkit-box-shadow: 0px 6px 20px 0px #1a72cc;
       -moz-box-shadow: 0px 6px 20px 0px #1a72cc;
       box-shadow: 0px 6px 20px 0px #1a72cc;
     }
+    54%{
+      -webkit-box-shadow: 0px 6px 20px 5px #1a72cc;
+      -moz-box-shadow: 0px 6px 20px 5px #1a72cc;
+      box-shadow: 0px 6px 20px 5px #1a72cc;
+    }
     100% { 
-      -webkit-box-shadow: 0px 6px 20px 2px #1a72cc;
-      -moz-box-shadow: 0px 6px 20px 2px #1a72cc;
-      box-shadow: 0px 6px 20px 2px #1a72cc;
+      -webkit-box-shadow: 0px 6px 20px 0px #1a72cc;
+      -moz-box-shadow: 0px 6px 20px 0px #1a72cc;
+      box-shadow: 0px 6px 20px 0px #1a72cc;
     }
 }
 
