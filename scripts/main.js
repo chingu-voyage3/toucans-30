@@ -29,7 +29,7 @@ btnAboutUs.addEventListener("click", function(e){
 
 let featureSec = document.querySelector("#features");
 let featureYPos = featureSec.offsetTop;
-let featureXPos = featureSec.offsetLeft;
+let featureXPos = featureSec.offsetLeft -70;
 let btnFeature = document.querySelector('[href="#features"]');
 
 btnFeature.addEventListener("click", function(e){
@@ -47,6 +47,18 @@ btnPricing.addEventListener("click", function(e){
 	window.scroll({ top: pricingYPos, left: pricingXPos, behavior: "smooth" });
 	e.preventDefault();
 });
+
+// Scroll resize coord fix
+window.addEventListener("resize", getCoord);
+
+function getCoord(){
+    aboutUsYPos = secAboutUs.offsetTop;
+    aboutUsXPos = secAboutUs.offsetLeft - 70;
+    featureYPos = featureSec.offsetTop;
+    featureXPos = featureSec.offsetLeft - 70;
+    pricingYPos = secPricing.offsetTop;
+    pricingXPos = secPricing.offsetLeft - 70;
+}
 
 //Anchor scroll
 let refLink = document.querySelector("#slack-ref");
