@@ -1189,7 +1189,7 @@ input::placeholder {
  	outline: none;
  	padding: 0.6rem;
  	position: fixed;
- 	right: 15px;
+ 	right: 55px;
  	transition: 0.5s ease-in-out;
  	z-index: 10;
  }
@@ -1217,7 +1217,7 @@ input::placeholder {
     height: auto;
     
     bottom: 15px;
-    right: 90px;
+    right: 30px;
 }
 
 #helpBtn{
@@ -1227,7 +1227,6 @@ input::placeholder {
     text-align: center;
     line-height: 40px;
     top: -15px;
-    left: -10px;
     
     -webkit-transition: 1s ease-in-out;
     -moz-transition: 1s ease-in-out;
@@ -1296,7 +1295,6 @@ input::placeholder {
 
 #helpBtn:checked{
     top: -470px;
-    left: 50px;
     
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -1772,7 +1770,6 @@ input[type=submit]:hover {
      
     #helpBtn{
         top: -11px;
-        left: 15px;
     }
      
      #helpBtn:after{
@@ -1794,9 +1791,6 @@ input[type=submit]:hover {
 }
  @media screen and (max-width: 800px){
     
-     #features{
-         
-    }
      .feature{
         width: 80%;
         height: 100%;
