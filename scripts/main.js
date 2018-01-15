@@ -66,4 +66,4 @@ let refLink = document.querySelector("#slack-ref");
 refLink.addEventListener("click", function(ev){
     ev.preventDefault();
     window.scroll({ top: 0, left: 0, behavior: "smooth" });
-})
+});

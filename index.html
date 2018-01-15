@@ -276,7 +276,32 @@
 			<button id="scrollToTop">
 				<i class="fa fa-chevron-up" aria-hidden="true"></i>
 				<div>Top</div>
-			</button>
+			</button>	
+            <div class="help-container">
+                <input id="helpBtn" type="checkbox">
+                <div class="help-body">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name please...">
+                    
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="example@yourmail.com">
+                    
+                    <label for="type">Type</label>
+                    <select id="type" name="type">
+                      <option value="suggestion">Suggestion</option>
+                      <option value="technical">Technical issue</option>
+                      <option value="site">site problem</option>
+                      <option value="other">other</option>
+                    </select>
+                    
+                    <label for="msg">Message: </label>
+                    <textarea id="msg" name="message"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            </div>
+            
 		</div>
 	<!-- JavaScript
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
