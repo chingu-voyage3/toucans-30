@@ -1211,6 +1211,11 @@ input::placeholder {
  	top: -10px;
  }
 
+
+ /* ------------------------------------------------------------ 
+  **Help Button Styles**
+ ------------------------------------------------------------ */
+
 .help-container{
     position: fixed;
     width: auto;
@@ -1218,6 +1223,8 @@ input::placeholder {
     
     bottom: 15px;
     right: 30px;
+    
+    z-index: 1;
 }
 
 #helpBtn{
@@ -1225,38 +1232,46 @@ input::placeholder {
     display: block;
     cursor: pointer;
     text-align: center;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
     line-height: 40px;
-    top: -15px;
+    top: -40px;
+    left: -15px;
     
-    -webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
-
-#helpBtn:after{
+.chk-btn{
     display: block;
     position: absolute;
     width: 40px;
     height: 40px;
-    
-    bottom: -1px;
-    right: -10px;
+    top: -40px;
+    left: -16px;
+    text-align: center;
     
     /*background: linear-gradient(#ffe9bf, #ffa90c);*/
     background: linear-gradient(#f4e2be, #dc636c);
     border-radius: 50%;
     border: 1px solid #eee;
-    content: '?';
-    z-index: 100;
+    z-index: -1;
     
-    -webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
-#helpBtn:hover:after{
+.chk-btn:after{
+    text-align: center;
+    line-height: 40px;
+    content: '?';
+}
+
+#helpBtn:hover ~ .chk-btn{
     background: linear-gradient(#f5e6c9, #d88c00);
 }
 
@@ -1271,6 +1286,7 @@ input::placeholder {
     background: #f5f5f5;
     padding: 13px;
     opacity: 0;
+    z-index: -100;
     
     -webkit-transform: translateY(100%);
     -moz-transform: translateY(100%);
@@ -1283,9 +1299,8 @@ input::placeholder {
     transition: 1s ease-in-out;
 }
 
-#helpBtn:checked + .help-body{
+#helpBtn:checked ~ .help-body{
     opacity: 1;
-    z-index: -100;
     
     -webkit-transform: translateY(0%);
     -moz-transform: translateY(0%);
@@ -1294,7 +1309,7 @@ input::placeholder {
 }
 
 #helpBtn:checked{
-    top: -470px;
+    top: -495px;
     
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -1302,18 +1317,23 @@ input::placeholder {
     transition: all 1s ease-in-out;
 }
 
-#helpBtn:checked:after{
-    content: "x";
+#helpBtn:checked ~ .chk-btn{
+    
+    top: -495px;
     
     -webkit-box-shadow: inset 0 0 6px 0px #925b56;
     -moz-box-shadow: inset 0 0 6px 0px #925b56;
     -o-box-shadow: inset 0 0 6px 0px #925b56;
     box-shadow: inset 0 0 6px 0px #925b56;
     
-    -webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#helpBtn:checked ~ .chk-btn:after{
+    content: "X";
 }
 
 input[type=text], select, textarea {
@@ -1769,17 +1789,24 @@ input[type=submit]:hover {
  @media screen and (max-width: 950px){
      
     #helpBtn{
-        top: -11px;
+        width: 35px;
+        height: 35px;
+        
+        top: -35px;
     }
      
-     #helpBtn:after{
+     .chk-btn{
          width: 35px;
          height: 35px;
          line-height: 35px;
+         top: -35px;
      }
      
      #helpBtn:checked{
-        top: -397px;
+        top: -420px;
+     }
+     #helpBtn:checked ~ .chk-btn{
+         top: -421px
      }
      textArea{
          margin-bottom: 0;
