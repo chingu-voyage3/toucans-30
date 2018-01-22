@@ -243,6 +243,7 @@ Authors: Richard, Kyrizu, Monali Ghosh
 
 #home{
     background: #73C4EF;
+    min-height: calc(100vh - 12rem);
 }
 
 .container{
@@ -258,6 +259,14 @@ Authors: Richard, Kyrizu, Monali Ghosh
     text-align: center;
     width: 40%;
     padding-bottom: 30px;
+}
+
+.slogan-title{
+    font-size: 3.3rem;
+}
+
+.slogan-title:after{
+    display: none;
 }
 
 .slogan{
@@ -283,25 +292,30 @@ Authors: Richard, Kyrizu, Monali Ghosh
 }
 
 .circle{
-    width: 300px;
-    height: 300px;
-    margin-left: 10px;
+    width: 40vw;
+    height: 40vw;
+    max-height: 400px;
+    max-width: 400px;
+    min-width: 280px;
+    min-height: 280px;
+    margin-left: 1vw;
     background: #FFD05C; 
     padding: 5px;
+    
     -webkit-border-radius: 50%; 
        -moz-border-radius: 50%; 
             border-radius: 50%;
 }
 
 .robot{
+    display: inline-block;
     position: relative;
-    right:3px;
-    top: 13px;  
+    margin: 0 auto;
+    top: 12.5%;
     height: 240px;
     
-    animation: robotFloat 4s infinite linear;   
+    animation: robotFloat 4s infinite linear; 
 }
-
 
 /* ***********
     Head
@@ -483,6 +497,7 @@ Authors: Richard, Kyrizu, Monali Ghosh
 }
 
 .chest-display{
+    position: inherit;
     display: block;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -490,11 +505,10 @@ Authors: Richard, Kyrizu, Monali Ghosh
     
     width: 90px;
     height: 45px;
-    position: relative;
     overflow: hidden;
     padding: 5px;
     top: -175px;
-    left: 101.5px;
+    left: 67px;
     
     border: 2px solid rgba(0,161,213,1);
     -webkit-border-radius: 25px / 50px;
@@ -526,7 +540,7 @@ Authors: Richard, Kyrizu, Monali Ghosh
     height: 100px;
     
     top: -334px;
-    left: 161px;
+    left: 126px;
     
     -webkit-transform: scaleY(-1);
        -moz-transform: scaleY(-1);    
@@ -628,7 +642,7 @@ Authors: Richard, Kyrizu, Monali Ghosh
     height: 100px;
     
     top: -418px;
-    left: 87px;
+    left: 52px;
     
     -webkit-transform: scale(-1);
        -moz-transform: scale(-1);
@@ -721,7 +735,7 @@ Authors: Richard, Kyrizu, Monali Ghosh
     width: 100px;
     height: 100px;
     top: -369px;
-    left: 104px;
+    left: 69px;
     z-index: 1;
 }
 
@@ -868,7 +882,7 @@ Authors: Richard, Kyrizu, Monali Ghosh
 
 .feature{    
     display: inline-block;
-    width: 22vw;
+    width: 24vw;
     height: auto;
     position: relative;
     
@@ -877,10 +891,9 @@ Authors: Richard, Kyrizu, Monali Ghosh
     text-align: center;
     overflow: hidden;
     
-    
-    -webkit-box-shadow: 1px 3px 20px 3px rgba(0,0,0,0.5);
-       -moz-box-shadow: 1px 3px 20px 3px rgba(0,0,0,0.5);
- 	        box-shadow: 1px 3px 20px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.2);
+       -moz-box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.2);
+ 	        box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.2);
 }
 
 .feature-pic{
@@ -888,9 +901,14 @@ Authors: Richard, Kyrizu, Monali Ghosh
     width: 100%;
     height: 17.5vw;
     background: #F1C66A;
+     
+    -webkit-border-top-left-radius: 4px;
+       -moz-border-top-left-radius: 4px;
+            border-top-left-radius: 4px;
     
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    -webkit-border-top-right-radius: 4px;
+       -moz-border-top-right-radius: 4px;
+            border-top-right-radius: 4px;
 }
 
 .feature-pic>img{
@@ -905,40 +923,10 @@ Authors: Richard, Kyrizu, Monali Ghosh
     min-height: 75px;
     
     background: #FAFAFA;
-    font-size: 17px;
     padding-top: 1vw;
     padding-bottom: 1vw;
     
-    border-bottom-right-radius: 7px;
-    border-bottom-left-radius: 7px;
 }
-
-.feature-demo{
-    width: 22vw;
-    height: 30px;
-    margin-left: -10px;
-    
-    color: white;
-    background-color: #5cb85c;
-    text-align: center;
-    border-color: #4cae4c;
-    border-radius: 7px;
-    overflow: hidden;
-}
-
-.feature-btn{
-    margin-top: 5px;
-}
-
-.feature-demo:hover{
-    color: #fff;
-    background-color: #449d44;
-    border-color: #398439;
-    
-    text-decoration: none;
-    overflow: hidden;
-}
-
 .code{
     background: #ededed;
     color: #ed143d;
@@ -1223,7 +1211,7 @@ input::placeholder {
     
     bottom: 15px;
     right: 90px;
-    z-index: 1;
+    z-index: 10;
 }
 
 #helpBtn{
@@ -1243,6 +1231,7 @@ input::placeholder {
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
 }
+
 .chk-btn{
     display: block;
     position: absolute;
@@ -1252,10 +1241,10 @@ input::placeholder {
     left: -21px;
     text-align: center;
     
-    /*background: linear-gradient(#ffe9bf, #ffa90c);*/
-    background: linear-gradient(#f4e2be, #dc636c);
+    /*background: linear-gradient(#f4e2be, #dc636c);*/
+    background: #e0cca4;
     border-radius: 50%;
-    border: 1px solid #eee;
+    border: 1px solid #dc636c;
     z-index: -1;
     
     -webkit-transition: all 1s ease-in-out;
@@ -1271,7 +1260,7 @@ input::placeholder {
 }
 
 #helpBtn:hover ~ .chk-btn{
-    background: linear-gradient(#f5e6c9, #d88c00);
+    background: #ffd05c;
 }
 
 .help-body{
@@ -1281,8 +1270,7 @@ input::placeholder {
     max-width: 350px;
     bottom: 0;
     right: 0;
-    border-radius: 11px;
-    background: #f5f5f5;
+    background: #ffffff;
     padding: 13px;
     opacity: 0;
     z-index: -100;
@@ -1333,7 +1321,7 @@ input::placeholder {
 }
 
 #helpBtn:checked ~ .chk-btn:after{
-    content: "X";    
+    content: "X";
     
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -1345,7 +1333,6 @@ input[type=text], select, textarea {
     width: 100%;
     padding: 12px; 
     border: 1px solid #ccc;
-    border-radius: 5px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px; 
@@ -1582,6 +1569,39 @@ input[type=submit]:hover {
  }
 
  @media screen and (min-width: 800px){
+     
+      .robot{
+         top: 6%
+     }
+     .head{
+         top: 2.5px;
+     }
+     
+     .torso{
+         transform: rotate(60deg) skewX(30deg) scale(1.1);
+     }
+     
+     .chest-display{
+         top: -167px;
+         transform: scale(1.1);
+     }
+     
+     .right-arm{
+         transform: scaleY(-1.1);
+         top: -330px;
+         left: 136px;
+     }
+     
+     .left-arm{
+         transform: scale(-1.1);
+         top: -413px;
+         left: 46px;
+     }
+     
+     .legs-container{
+         transform: scale(1.1);
+         top: -354px;
+     }
 
  	.about-us-team {
  		min-height: 285px;
@@ -1647,7 +1667,40 @@ input[type=submit]:hover {
  }
 
  @media screen and (min-width: 950px){
-
+     
+     .robot{
+         top: 6%
+     }
+     .head{
+         top: 5px;
+     }
+     
+     .torso{
+         transform: rotate(60deg) skewX(30deg) scale(1.2);
+     }
+     
+     .chest-display{
+         top: -157px;
+         transform: scale(1.2);
+     }
+     
+     .right-arm{
+         transform: scaleY(-1.2);
+         top: -324px;
+         left: 143px;
+     }
+     
+     .left-arm{
+         transform: scale(-1.2);
+         top: -407px;
+         left: 41px;
+     }
+     
+     .legs-container{
+         transform: scale(1.2);
+         top: -339px;
+     }
+     
  	nav {
  	min-width: 70px;
  }
@@ -1785,21 +1838,30 @@ input[type=submit]:hover {
  		min-height: 750px;
  	}
 
-          .pricing input {
-    width: 40%;
+      .pricing input {
+        width: 40%;
+
+      }
 
  }
 
- }
- @media screen and (max-width: 950px){
+
+
+ @media screen and (max-width: 1050px){
+     .feature-desc{
+         min-height: 95px;
+     }
+}
      
-    #helpBtn{
+
+ @media screen and (max-width: 950px){
+     #helpBtn{
         width: 35px;
         height: 35px;
         
         top: -35px;
         left: 5px;
-    }
+     }
      
      .chk-btn{
          width: 35px;
@@ -1824,7 +1886,13 @@ input[type=submit]:hover {
      }
 }
  @media screen and (max-width: 800px){
-    
+     .circle{
+         margin-left: 4vw;
+     }
+     .robot{
+         top: 6.25%
+     }
+     
      .feature{
         width: 80%;
         height: 100%;
@@ -1845,8 +1913,6 @@ input[type=submit]:hover {
      .feature-demo{
          width: 50vw;
      }
-     
-     
  }
 
  @media screen and (max-width: 600px){
@@ -1855,25 +1921,25 @@ input[type=submit]:hover {
      }
      
      .circle{
-         width: 250px;
-         height: 270px;
+         min-width: 250px;
+         min-height: 270px;
          margin-left: 0;
      }
      
      .chest-display{
-         left: 76.5px;
+         left: 66.5px;
      }
      
      .right-arm{
-         left: 137px;
+         left: 126px;
      }
      
      .left-arm{
-         left: 63px;
+         left: 52px;
      }
      
      .legs-container{
-         left: 79px;
+         left: 66px;
      }
      
      .home-desc{
