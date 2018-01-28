@@ -714,30 +714,31 @@ p {
   background: #e0cca4;
   text-align: center;
   min-height: 285px;
+  border: 1px solid #e0cca4;
 }
 .about-us-team-profile {
   margin: 0 auto;
   width: 80%;
 }
-.about-us-team-profile > ul {
+.about-us-team-profile > .about-us-team-profile-list {
   list-style-type: none;
   padding: 0;
   height: 100%;
 }
-.about-us-team-profile > ul > li {
+.about-us-team-profile > .about-us-team-profile-list > .about-us-team-profile-item {
   display: inline-block;
   position: relative;
   height: 130px;
   width: 130px;
-  border: 10px solid rgba(255,255,255,0.4);
+  border: 10px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
-  margin: 2rem 5rem;
+  margin: 1rem 5rem;
 }
-.about-us-team-profile > ul > li > img {
+.about-us-team-profile > .about-us-team-profile-list > .about-us-team-profile-item > img {
   border-radius: 50%;
   width: 100%;
 }
-.about-us-team-profile > ul > li:before {
+.about-us-team-profile > .about-us-team-profile-list > .about-us-team-profile-item:before {
   content: "";
   position: absolute;
   color: #000;
@@ -750,7 +751,7 @@ p {
       transform: translate(-50%, -150%);
   width: 200px;
 }
-.about-us-team-profile > ul > li:after {
+.about-us-team-profile > .about-us-team-profile-list > .about-us-team-profile-item:after {
   content: "";
   position: absolute;
   color: #000;
@@ -762,22 +763,22 @@ p {
       transform: translate(-50%, -180%);
   width: 200px;
 }
-.about-us-team-profile > ul li:nth-child(1):before {
+.about-us-team-profile > .about-us-team-profile-list .about-us-team-profile-item:nth-child(1):before {
   content: "Monali Ghosh";
 }
-.about-us-team-profile > ul li:nth-child(1):after {
+.about-us-team-profile > .about-us-team-profile-list .about-us-team-profile-item:nth-child(1):after {
   content: "Project Manager";
 }
-.about-us-team-profile > ul li:nth-child(2):before {
+.about-us-team-profile > .about-us-team-profile-list .about-us-team-profile-item:nth-child(2):before {
   content: "Mahamed Amiin";
 }
-.about-us-team-profile > ul li:nth-child(2):after {
+.about-us-team-profile > .about-us-team-profile-list .about-us-team-profile-item:nth-child(2):after {
   content: "Product Manager";
 }
-.about-us-team-profile > ul li:nth-child(3):before {
+.about-us-team-profile > .about-us-team-profile-list .about-us-team-profile-item:nth-child(3):before {
   content: "Richard Graham";
 }
-.about-us-team-profile > ul li:nth-child(3):after {
+.about-us-team-profile > .about-us-team-profile-list .about-us-team-profile-item:nth-child(3):after {
   content: "Support";
 }
 
@@ -786,7 +787,6 @@ p {
  ------------------------------------------------------------ */
 #features {
   padding: 10px;
-  /*margin-top: -20px;*/
   min-height: 300px;
   text-align: center;
   background: #DC636C;
@@ -796,8 +796,9 @@ p {
   background: #f4e2be;
 }
 .feature-list{
+  padding-top: 1rem;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1300px;
 }
 .feature{
   display: inline-block;
@@ -854,18 +855,22 @@ p {
   width: 100%;
   position: relative;
 }
-.pricing-content-wrapper > div {
+.pricing-content-wrapper > .pricing-content {
   display: inline-block;
-  position: absolute;
   background: #ffffff;
   text-align: center;
-  min-width: 400px;
-  width: 35%;
-  margin: 2rem 0;
+  max-width: 410px;
+  width: 31.333%;
+  margin: 2rem 2% 2rem 0;
   -webkit-box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.1);
 }
-.pricing input {
+
+.pricing-content-wrapper > .pricing-content:last-child {
+  margin-right: 0;
+}
+
+.pricing input[name="get-started"] {
   border: none;
   color: #fff;
   padding: 1rem;
@@ -880,7 +885,7 @@ p {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.pricing input:hover {
+.pricing input[name="get-started"]:hover {
   width: 100%;
 }
 .pricing-boxhead {
@@ -901,9 +906,6 @@ p {
 .pricing-descri {
   padding: 1.5rem;
   min-height: 750px;
-}
-.pro {
-  min-height: 790px;
 }
 .pricing-descri > ul {
   list-style-type: none;
@@ -1193,547 +1195,6 @@ input[type=submit]:hover {
 }
 
 /* ------------------------------------------------------------ 
- Media Queries
- ------------------------------------------------------------ */
- @media screen and (min-width: 1350px){
-  .pricing-descri {
-    min-height: 750px;
-  }
-  .pricing input {
-    width: 40%;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  h1 {
-    font-size: 2.5rem; /* 40px / 16px */
-  }
-  main, footer {
-    margin-left: 50px;
-  }
-  .about-us {
-    width: 90%;
-  }
-  .about-us-intro {
-    display: block;
-    width: 100%;
-    margin-bottom: 0;
-  }
-  .about-us-intro p {
-    margin-bottom: 0;
-  }
-  .about-us > div:last-child > p:last-child {
-    margin-bottom: 3rem;
-  }
-  .about-us-team-profile {
-    width: 100%;
-  }
-  .about-us-team-profile > ul {
-    border: 1px solid rgba(0,0,0,0);
-  }
-  .about-us-team-profile > ul > li {
-    display: block;
-    position: relative;
-    height: 100px;
-    width: 100px;
-    border-width: 5px;
-    margin: 5rem auto;
-  }
-  .about-us-team-profile > ul > li:nth-child(1) {
-    margin: 2rem auto 5rem;
-  }
-  .about-us-team-profile > ul > li:before {
-    font-size: 1.25rem; /* 20px / 16px */
-    min-width: 200px;
-  }
-  .about-us-team-profile > ul > li:after {
-    font-size: 1.125rem;  /* 18px / 16px */
-  }
-  .pricing {
-    width: 100%;
-    position: relative;
-  }
-  .pricing-content-wrapper > div {
-    display: block;
-    min-width: 250px;
-    width: 80%;
-    position: relative;
-  }
-  .pricing input {
-    width: 60%;
-  }
-  .box-community, .box-enterprise, .box-pro {
-    left: 65%;
-    top:0;
-    -webkit-transform: translateX(-65%);
-        -ms-transform: translateX(-65%);
-            transform: translateX(-65%);
-  }
-  #scrollToTop {
-    border: 1px solid rgba(255,255,255,0.5);
-    padding: 0.4rem;
-    font-size: 1rem;
-  }
-  #scrollToTop:hover i {
-    opacity: 1;
-    top: -5px;
-  }
-  nav {
-    min-width: 50px;
-  }
-  .menuToggle {
-    width: 30px;
-    height: 30px;
-    top: 22px;
-    left: 9px;
-  }
-  .menu-line2 {
-    top: 8px;
-  }
-  .menu-line3 {
-    top: 16px;
-  }
-  .logo-sm {
-    left: -125%;
-    -webkit-transform: rotate(-90deg) translate(-6%, 90%);
-        -ms-transform: rotate(-90deg) translate(-6%, 90%);
-            transform: rotate(-90deg) translate(-6%, 90%);
-    font-size: 1.8rem;
-    color: #f4e2be;
-    font-weight: 700;
-  }
-  .navigation {
-    width: 200px;
-    margin-left: -180px;
-  }
-  .footerInfo {
-    width: 100%;
-  }
-  .footerInfo_contactInfo, .footerInfo_socialmediaInfo {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-  .info_addressCity {
-    margin-bottom: 0;
-  }
-  .socialmediaInfo_icons {
-    font-size: 1.1rem;
-  }
-  .icons {
-    height: 15px;
-    width: 15px;
-  }
-}
-
-@media screen and (min-width: 600px){
-  .about-us-team {
-    min-height: 250px;
-  }
-  .about-us-team-profile {
-    width: 100%;
-  }
-  .about-us-team-profile > ul {
-    border: 1px solid rgba(0,0,0,0);
-  }
-  .about-us-team-profile > ul > li {
-    display: inline-block;
-    position: relative;
-    height: 90px;
-    width: 90px;
-    border-width: 8px;
-    margin: 2rem 2rem;
-  }
-  .about-us-team-profile > ul > li:nth-child(1) {
-    margin: 2rem 1.5rem;
-  }
-  .pricing-descri {
-    min-height: 690px;
-  }
-  .pricing input {
-    width: 40%;
-  }
-  .socialmediaInfo_icons {
-    font-size: 1.5rem;
-  }
-  .icons {
-    height: 25px;
-    width: 25px;
-  }
-  #hamMenu:checked ~ main, #hamMenu:checked ~ footer {
-    -webkit-transform: translateX(150px);
-        -ms-transform: translateX(150px);
-            transform: translateX(150px);
-  }
-}
-
-@media screen and (min-width: 800px){
-  .robot{
-    margin-top: 6%;
-  }
-  .head{
-    top: 2.5px;
-  }
-  .torso{
-    -webkit-transform: rotate(60deg) skewX(30deg) scale(1.1);
-        -ms-transform: rotate(60deg) skewX(30deg) scale(1.1);
-            transform: rotate(60deg) skewX(30deg) scale(1.1);
-  }
-  .chest-display{
-    top: -167px;
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  .right-arm{
-    -webkit-transform: scaleY(-1.1);
-        -ms-transform: scaleY(-1.1);
-            transform: scaleY(-1.1);
-    top: -330px;
-    left: 136px;
-  }
-  .left-arm{
-    -webkit-transform: scale(-1.1);
-        -ms-transform: scale(-1.1);
-            transform: scale(-1.1);
-    top: -413px;
-    left: 46px;
-  }
-  .legs-container{
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
-    top: -354px;
-  }
-  .about-us-team {
-    min-height: 285px;
-  }
-  .about-us-team-profile > ul > li {
-    height: 120px;
-    width: 120px;
-    margin: 2rem 2.7rem;
-  }
-  .about-us-team-profile > ul > li:nth-child(1) {
-    margin: 2rem 2.7rem;
-  }
-  .pricing-content-wrapper {
-    width: 100%;
-    position: relative;
-  }
-  .pricing-content-wrapper > div {
-    display: inline-block;
-    min-width: 200px;
-    max-width: 230px;
-    margin: 1.5rem 0 2rem;
-  }
-  .box-community, .box-enterprise, .box-pro {
-    left: 0;
-    top:0;
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
-  }
-  .pricing-descri {
-    min-height: 980px;
-  }
-  .pricing input {
-    width: 60%;
-  }
-  .footerInfo {
-    width: 90%;
-    max-width: 1300px;
-    margin: 0 auto;
-  }
-  .footerInfo_contactInfo, .footerInfo_socialmediaInfo {
-    display: inline-block;
-    width: 48%;
-    vertical-align: top;
-  }
-  .footerInfo_socialmediaInfo {
-    text-align: right;
-  }
-  .footerInfo_contactInfo {
-    text-align: left;
-  }
-}
- 
-@media screen and (min-width: 950px){
-  .robot{
-    margin-top: 10%;
-  }
-  .head{
-    top: 5px;
-  }
-  .torso{
-    -webkit-transform: rotate(60deg) skewX(30deg) scale(1.2);
-        -ms-transform: rotate(60deg) skewX(30deg) scale(1.2);
-            transform: rotate(60deg) skewX(30deg) scale(1.2);
-  }
-  .chest-display{
-    top: -157px;
-    -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  .right-arm{
-    -webkit-transform: scaleY(-1.2);
-        -ms-transform: scaleY(-1.2);
-            transform: scaleY(-1.2);
-    top: -324px;
-    left: 143px;
-  }
-  .left-arm{
-    -webkit-transform: scale(-1.2);
-        -ms-transform: scale(-1.2);
-            transform: scale(-1.2);
-    top: -407px;
-    left: 41px;
-  }
-  .legs-container{
-    -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-            transform: scale(1.2);
-    top: -339px;
-  }
-  nav {
-    min-width: 70px;
-  }
-  main, footer {
-    margin-left: 70px;
-  }
-  .navigation {
-    width: 260px;
-    margin-left: -220px;
-  }
-  .logo-sm {
-    left: -90%;
-    font-size: 2rem;
-  }
-  .menuToggle {
-    width: 40px;
-    height: 40px;
-    top: 25px;
-    left: 15px;
-  }
-  .menu-line2 {
-    top: 10px;
-  }
-  .menu-line3 {
-    top: 20px;
-  }
-  .about-us-team-profile > ul > li {
-    height: 130px;
-    width: 130px;
-    margin: 2rem 4rem;
-  }
-  .about-us-team-profile > ul > li:before {
-    font-size: 1.375rem; /* 22px / 16px */
-  }
-  .about-us-team-profile > ul > li:after {
-    font-size: 1.25rem; /* 20px / 16px */
-  }
-  .pricing {
-    width: 90%;
-  }
-  .pricing-content-wrapper > div {
-    min-width: 250px;
-    max-width: 32%;
-    margin-bottom: 3rem;
-  }
-  .pricing-descri {
-    min-height: 940px;
-  }
-  #hamMenu:checked ~ main, #hamMenu:checked ~ footer {
-    -webkit-transform: translateX(185px);
-        -ms-transform: translateX(185px);
-            transform: translateX(185px);
-  }
-  #scrollToTop {
-    border: 2px solid rgba(255,255,255,0.5);
-    font-size: 1.25rem;
-  }
-  #scrollToTop:hover i {
-    opacity: 1;
-    top: -5px;
-  }
-}
-
-@media screen and (min-width: 1050px){
-  .about-us-intro {
-    display: inline-block;
-    width: 48%;
-  }
-  .pricing-content-wrapper > div {
-    min-width: 250px;
-    max-width: 32%;
-  }
-  .pricing-descri {
-    min-height: 845px;
-  }
-  .pricing input {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 1200px){
-  .slack-button{
-    width: 45%;
-  }
-}
-
-@media screen and (max-width: 1050px){
-  .feature-desc{
-    min-height: 95px;
-  }
-  .slack-button{
-    width: 55%;
-  }
-}
-
-@media screen and (max-width: 950px){
-  .slogan-title{
-    font-size: 5rem;
-    margin: 1rem;
-  }
-  .slogan{
-    margin: 1rem 1rem 1.5rem;
-    font-size: 1.5rem;
-  }
-  #helpBtn{
-    width: 35px;
-    height: 35px;
-    top: -35px;
-    left: 28px;
-  }
-  .chk-btn{
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    top: -35px;
-    left: 28px;
-  }
-  #helpBtn:checked{
-    top: -420px;
-  }
-  #helpBtn:checked ~ .chk-btn{
-    top: -421px 
-  }
-  textArea{
-    margin-bottom: 0;
-  }
-  input[type=text], select, textarea {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 800px){
-  .slogan-title{
-    font-size: 4rem;
-    margin: 1rem;
-  }
-  .slogan{
-    margin: 1rem 1rem 1.5rem;
-    font-size: 1.4rem;
-  }
-  .slack-button{
-    width: 70%;
-  }
-  .circle{
-    margin-left: 4vw;
-  }
-  .robot{
-    margin-top: 3%;
-  }
-  .feature{
-    width: 80%;
-    max-width: 100%;
-    height: 100%;
-  }
-  .feature-pic{
-    height: 30vw;
-    padding-bottom: 20px;
-  }
-  .feature-pic > img {
-    width: 35%;
-  }
-  .feature-desc{
-    min-height: 50px;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 600px){
-  .slogan{
-    margin: 1.5rem 1rem 2rem;
-  }
-  .slack-button{
-    width: 50%;
-  }
-  .adj{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .circle{
-    min-width: 250px;
-    min-height: 270px;
-    margin-left: 0;
-  }
-  .chest-display{
-    left: 66.5px;
-  }
-  .right-arm{
-    left: 126px;
-  }
-  .left-arm{
-    left: 52px;
-  }
-  .legs-container{
-    left: 66px;
-  }
-  .home-desc{
-    width:85%;
-  }
-  .robot-container{
-    padding-top: 0px;
-  }
-  .robot{
-    top: 0px;
-  }
-}
-
-@media screen and (max-width: 450px){
-  .slogan-title{
-    font-size: 3.5rem;
-    margin: 1rem;
-  }
-  .slogan{
-    font-size: 1.2rem;
-  }
-  .slack-button{
-    width: 70%;
-  }
-  .circle{
-    min-width: 300px;
-    min-height: 300px;
-  }
-}
-
-@media screen and (max-width: 320px){
-  .slogan-title{
-    font-size: 2.8rem;
-  }
-  .slack-button{
-    width: 90%;
-  }
-  .circle{
-    min-width: 250px;
-    min-height: 270px;
-  }
-}
-
-/* ------------------------------------------------------------ 
  Animations
  ------------------------------------------------------------ */
 
@@ -1952,5 +1413,352 @@ input[type=submit]:hover {
   100% {
     -webkit-box-shadow: 0 0 15px 25px rgba(244, 226, 190, 0.2);
             box-shadow: 0 0 15px 25px rgba(244, 226, 190, 0.2);
+  }
+}
+
+/* ------------------------------------------------------------ 
+ Media Queries
+ ------------------------------------------------------------ */
+@media screen and (max-width: 2190px) {
+  .pricing-descri {
+    min-height: 800px;
+  }
+}
+
+@media screen and (max-width: 2150px) {
+  .about-us,
+  .pricing,
+  .footerInfo {
+    width: 90%;
+  }
+  .pricing-content-wrapper > .pricing-content {
+    width: 31.7%;
+  }
+  .pricing-descri {
+    min-height: 730px;
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .pricing-content-wrapper > .pricing-content {
+    width: 31%;
+    margin-right: 1.5%;
+  }
+  .pricing-descri {
+    min-height: 755px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .about-us-team-profile {
+    width: 100%;
+  }
+  .about-us-team-profile > .about-us-team-profile-list > .about-us-team-profile-item {
+    margin: 1rem 4rem;
+  }
+  .pricing-content-wrapper > .pricing-content {
+    width: 31.5%;
+  }
+  .pricing-descri {
+    min-height: 940px;
+  }
+  .pricing input[name="get-started"]  {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .slack-button {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .feature-desc {
+    min-height: 95px;
+  }
+  .slack-button {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+   .slogan-title {
+    font-size: 5rem;
+    margin: 1rem;
+  }
+  .slogan {
+    margin: 1rem 1rem 1.5rem;
+    font-size: 1.5rem;
+  }
+  .slack-button {
+    width: 60%;
+  }
+  #helpBtn {
+    width: 35px;
+    height: 35px;
+    top: -35px;
+    left: 28px;
+  }
+  .chk-btn {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    top: -35px;
+    left: 28px;
+  }
+  #helpBtn:checked {
+    top: -420px;
+  }
+  #helpBtn:checked ~ .chk-btn {
+    top: -421px 
+  }
+  textArea {
+    margin-bottom: 0;
+  }
+  input[type=text], select, textarea {
+    margin-bottom: 0;
+  }
+  .about-us-intro {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .about-us-intro p {
+    margin-bottom: 0;
+  }
+  .about-us > div:last-child > p:last-child {
+    margin-bottom: 3rem;
+  }
+  .about-us-team {
+    min-height: 245px;
+  }
+  .about-us-team-profile > .about-us-team-profile-list > .about-us-team-profile-item {
+    height: 110px;
+    width: 110px;
+    border-width: 6px;
+    margin: 1rem 2.4rem;
+  }
+  .about-us-team-profile > .about-us-team-profile-list > .about-us-team-profile-item:before,
+  .about-us-team-profile > .about-us-team-profile-list > .about-us-team-profile-item:after {
+    font-size: 1.2rem; 
+    width: 170px;
+  }
+  .pricing {
+    width: 100%;
+  }
+  .pricing-content-wrapper > .pricing-content {
+    display: block;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    margin: 1rem auto 2rem;
+  }
+  .pricing-content-wrapper > .pricing-content:last-child {
+    margin-right: auto;
+  }
+  .pricing-content-wrapper > .pricing-content:first-child {
+    margin-top: 3rem;
+  }
+  .pricing-descri {
+    min-height: 660px;
+  }
+  .pricing input[name="get-started"]  {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .slogan-title{
+    font-size: 4rem;
+    margin: 1rem;
+  }
+  .slogan {
+    margin: 1rem 1rem 1.5rem;
+    font-size: 1.4rem;
+  }
+  .slack-button {
+    width: 70%;
+  }
+  .circle {
+    margin-left: 4vw;
+  }
+  .robot {
+    margin-top: 3%;
+  }
+  .feature {
+    width: 80%;
+    max-width: 100%;
+    height: 100%;
+  }
+  .feature-pic {
+    height: 30vw;
+    padding-bottom: 20px;
+  }
+  .feature-pic > img {
+    width: 35%;
+  }
+  .feature-desc {
+    min-height: 50px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+    h1 {
+    font-size: 2.5rem; 
+  }
+  nav {
+    min-width: 50px;
+  }
+  .menuToggle {
+    width: 30px;
+    height: 30px;
+    top: 22px;
+    left: 9px;
+  }
+  .menu-line2 {
+    top: 8px;
+  }
+  .menu-line3 {
+    top: 16px;
+  }
+  .logo-sm {
+    left: -125%;
+    -webkit-transform: rotate(-90deg) translate(-6%, 90%);
+        -ms-transform: rotate(-90deg) translate(-6%, 90%);
+            transform: rotate(-90deg) translate(-6%, 90%);
+    font-size: 1.8rem;
+    color: #f4e2be;
+    font-weight: 700;
+  }
+  .navigation {
+    width: 200px;
+    margin-left: -180px;
+  }
+  .slack-button {
+    width: 75%;
+  }
+  .about-us-team-profile {
+    width: 100%;
+  }
+  .about-us-team-profile > .about-us-team-profile-list > .about-us-team-profile-item {
+    display: block;
+    height: 120px;
+    width: 120px;
+    border-width: 6px;
+    margin: 6rem auto 5rem;
+  }
+  .about-us-team-profile > .about-us-team-profile-list > .about-us-team-profile-item:first-child {
+    margin-top: 2rem;
+  }
+  .pricing-content-wrapper > .pricing-content {
+    max-width: 400px;
+  }
+  .pricing input[name="get-started"]  {
+    width: 60%;
+  }
+   .footerInfo {
+    width: 100%;
+  }
+  .footerInfo_contactInfo, .footerInfo_socialmediaInfo {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .info_addressCity {
+    margin-bottom: 0;
+  }
+  .socialmediaInfo_icons {
+    font-size: 1.1rem;
+  }
+  .icons {
+    height: 15px;
+    width: 15px;
+  }
+  main, footer {
+    margin-left: 50px;
+  }
+  #hamMenu:checked ~ main, #hamMenu:checked ~ footer {
+    -webkit-transform: translateX(145px);
+        -ms-transform: translateX(145px);
+            transform: translateX(145px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slogan {
+    margin: 1.5rem 1rem 2rem;
+  }
+  .slack-button {
+    width: 50%;
+  }
+  .adj {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .circle {
+    min-width: 250px;
+    min-height: 270px;
+    margin-left: 0;
+  }
+  .chest-display {
+    left: 66.5px;
+  }
+  .right-arm {
+    left: 126px;
+  }
+  .left-arm {
+    left: 52px;
+  }
+  .legs-container {
+    left: 66px;
+  }
+  .home-desc {
+    width:85%;
+  }
+  .robot-container {
+    padding-top: 0px;
+  }
+  .robot {
+    top: 0px;
+  }
+  .feature {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .slogan-title {
+    font-size: 3.5rem;
+    margin: 1rem;
+  }
+  .slogan {
+    font-size: 1.2rem;
+  }
+  .slack-button {
+    width: 70%;
+  }
+  .circle {
+    min-width: 300px;
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .slogan-title {
+    font-size: 2.8rem;
+  }
+  .slack-button {
+    width: 90%;
+  }
+  .circle {
+    min-width: 250px;
+    min-height: 270px;
+  }
+  .feature {
+    width: 95%;
   }
 }
