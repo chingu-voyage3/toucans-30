@@ -60,10 +60,25 @@ function getCoord(){
     pricingXPos = secPricing.offsetLeft - 70;
 }
 
-//Anchor scroll
+// Anchor scroll
 let refLink = document.querySelector("#slack-ref");
 
 refLink.addEventListener("click", function(ev){
     ev.preventDefault();
     window.scroll({ top: 0, left: 0, behavior: "smooth" });
 });
+
+// Robot Chest Display Messages
+let robotChest = document.querySelector(".chest-display");
+let robotChestMessages = ["My name is TickyBot", "How are you today?", "Are you Good?",  "Hope you have a good day", "Hello humans"];
+setInterval(() => { 
+  robotChestMessages.forEach((message, index, arr) => {
+    if(index === 0){
+      robotChest.innerHTML = message; 
+      let currentMessage = arr.shift();
+      arr.push(currentMessage);
+    } 
+});
+}, 5000);
+
+

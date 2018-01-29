@@ -465,7 +465,9 @@ p {
 }
 .chest-display {
   position: inherit;
-  display: block;
+  /*display: block;*/
+  display: table-cell;
+  vertical-align: middle;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   width: 90px;
@@ -476,7 +478,7 @@ p {
   left: 67px;
   border: 2px solid rgba(0,161,213,1);
   border-radius: 25px / 50px;
-  font: normal 50%/normal Tahoma, Geneva, sans-serif;
+  font-size: 0.8rem;
   color: rgba(255,255,255,1);
   text-align: center;
   -o-text-overflow: clip;
@@ -487,6 +489,7 @@ p {
   -webkit-box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
   box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
   z-index: 3;
+  transition: all 0.5s ease-in-out;
 }
 /* -------------- Right Arm -------------- */
 .right-arm {
@@ -1420,6 +1423,43 @@ input[type=submit]:hover {
  Media Queries
  ------------------------------------------------------------ */
 @media screen and (max-width: 2190px) {
+  .robot{
+    margin-top: 10%;
+  }
+  .head{
+    top: 5px;
+  }
+  .torso{
+    -webkit-transform: rotate(60deg) skewX(30deg) scale(1.2);
+        -ms-transform: rotate(60deg) skewX(30deg) scale(1.2);
+            transform: rotate(60deg) skewX(30deg) scale(1.2);
+  }
+  .chest-display{
+    top: -157px;
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .right-arm{
+    -webkit-transform: scaleY(-1.2);
+        -ms-transform: scaleY(-1.2);
+            transform: scaleY(-1.2);
+    top: -324px;
+    left: 143px;
+  }
+  .left-arm{
+    -webkit-transform: scale(-1.2);
+        -ms-transform: scale(-1.2);
+            transform: scale(-1.2);
+    top: -407px;
+    left: 41px;
+  }
+  .legs-container{
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+    top: -339px;
+  }
   .pricing-descri {
     min-height: 800px;
   }
@@ -1483,6 +1523,43 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width: 950px) {
+  .robot{
+    margin-top: 6%;
+  }
+  .head{
+    top: 2.5px;
+  }
+  .torso{
+    -webkit-transform: rotate(60deg) skewX(30deg) scale(1.1);
+        -ms-transform: rotate(60deg) skewX(30deg) scale(1.1);
+            transform: rotate(60deg) skewX(30deg) scale(1.1);
+  }
+  .chest-display{
+    top: -167px;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .right-arm{
+    -webkit-transform: scaleY(-1.1);
+        -ms-transform: scaleY(-1.1);
+            transform: scaleY(-1.1);
+    top: -330px;
+    left: 136px;
+  }
+  .left-arm{
+    -webkit-transform: scale(-1.1);
+        -ms-transform: scale(-1.1);
+            transform: scale(-1.1);
+    top: -413px;
+    left: 46px;
+  }
+  .legs-container{
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    top: -354px;
+  }
    .slogan-title {
     font-size: 5rem;
     margin: 1rem;
